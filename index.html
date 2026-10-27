@@ -176,10 +176,10 @@
 
   <!-- 4. カテゴリ絞り込みセレクター（トップバナー直下・横スライド完全撤廃・整然としたフレックス配置） -->
   <section class="bg-white border-b border-slate-200 py-3.5 px-4 sm:px-6 shadow-2xs relative z-30">
-    <div class="max-w-6xl mx-auto flex flex-col
+    <div class="max-w-6xl mx-auto space-y-3">
 
       <!-- 週間パッケージ切り替えタブ -->
-      <div class="w-full flex items-center justify-between border-b border-slate-200 pb-3 mb-1 flex-wrap gap-2">
+      <div class="w-full flex items-center justify-between border-b border-slate-200 pb-3 flex-wrap gap-2">
         <div class="flex items-center gap-1.5 text-xs font-black text-slate-800">
           <i class="fa-solid fa-calendar-week text-sky-600"></i>
           <span>週間パッケージ</span>
@@ -199,41 +199,43 @@
           </button>
         </div>
       </div>
- md:flex-row items-center justify-between gap-3">
-      
-      <!-- ラベル -->
-      <div class="flex items-center gap-2 text-xs font-black text-slate-800 shrink-0">
-        <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-        <i class="fa-solid fa-shapes text-sky-600"></i>
-        <span>目的・実践テーマで絞り込む</span>
-      </div>
 
-      <!-- 横スライドなし・画面幅に合わせて美しく整列・折り返すスマートピル群 -->
-      <div class="flex flex-wrap items-center justify-center md:justify-end gap-1.5 sm:gap-2">
-        <button type="button" onclick="filterCategory('all')" id="cat-btn-all" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-xs flex items-center gap-1.5 bg-sky-600 text-white border border-sky-600">
-          <span>🌟</span> すべて (7)
-        </button>
-        <button type="button" onclick="filterCategory('kahoot')" id="cat-btn-kahoot" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>🚀</span> 即効性授業・Kahoot!
-        </button>
-        <button type="button" onclick="filterCategory('translation')" id="cat-btn-translation" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>📖</span> 教科書「現場語」翻訳
-        </button>
-        <button type="button" onclick="filterCategory('exam')" id="cat-btn-exam" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>⏱️</span> 校務・作問時短
-        </button>
-        <button type="button" onclick="filterCategory('dialogue')" id="cat-btn-dialogue" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>💬</span> 学級対話・Padlet
-        </button>
-        <button type="button" onclick="filterCategory('career')" id="cat-btn-career" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>🛠️</span> 就職・音声PR
-        </button>
-        <button type="button" onclick="filterCategory('peer')" id="cat-btn-peer" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>👥</span> ピア・学級運営
-        </button>
-        <button type="button" onclick="filterCategory('inclusive')" id="cat-btn-inclusive" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
-          <span>🤝</span> ギガ死・格差対策
-        </button>
+      <!-- カテゴリ絞り込み行 -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+        <!-- ラベル -->
+        <div class="flex items-center gap-2 text-xs font-black text-slate-800 shrink-0">
+          <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+          <i class="fa-solid fa-shapes text-sky-600"></i>
+          <span>目的・実践テーマで絞り込む</span>
+        </div>
+
+        <!-- 横スライドなし・画面幅に合わせて美しく整列・折り返すスマートピル群 -->
+        <div class="flex flex-wrap items-center justify-center md:justify-end gap-1.5 sm:gap-2">
+          <button type="button" onclick="filterCategory('all')" id="cat-btn-all" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-xs flex items-center gap-1.5 bg-sky-600 text-white border border-sky-600">
+            <span>🌟</span> すべて (21)
+          </button>
+          <button type="button" onclick="filterCategory('kahoot')" id="cat-btn-kahoot" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>🚀</span> 即効性授業・出欠
+          </button>
+          <button type="button" onclick="filterCategory('translation')" id="cat-btn-translation" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>📖</span> 現場語翻訳・つまずき救出
+          </button>
+          <button type="button" onclick="filterCategory('exam')" id="cat-btn-exam" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>⏱️</span> 校務・採点・所見時短
+          </button>
+          <button type="button" onclick="filterCategory('dialogue')" id="cat-btn-dialogue" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>💬</span> 学級対話・提出物・面談
+          </button>
+          <button type="button" onclick="filterCategory('career')" id="cat-btn-career" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>🛠️</span> 就職・面接・探究
+          </button>
+          <button type="button" onclick="filterCategory('peer')" id="cat-btn-peer" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>👥</span> ピア・部活・学級運営
+          </button>
+          <button type="button" onclick="filterCategory('inclusive')" id="cat-btn-inclusive" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-bold transition shadow-2xs flex items-center gap-1.5 bg-slate-50 hover:bg-white text-slate-700 border border-slate-200 hover:border-sky-300">
+            <span>🤝</span> ギガ死・別室・福祉
+          </button>
+        </div>
       </div>
 
     </div>
