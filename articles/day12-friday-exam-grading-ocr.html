@@ -24,7 +24,7 @@
     <div class="max-w-5xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-2">
         <span class="bg-rose-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第12弾</span>
-        <span>第2週 日刊実践連載 ｜ 朝6:30配信</span>
+        <span>校務時短・採点自動化 ｜ 第2週 ｜ 朝6:30日刊配信</span>
       </div>
       <div class="flex items-center gap-4 text-xs">
         <span class="text-slate-400"><i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合</span>
@@ -47,89 +47,99 @@
       <div class="flex items-center gap-3">
         <a href="../articles.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 transition">実践記事一覧</a>
         <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
-          <i class="fa-solid fa-house"></i> <span>トップ</span>
+          <i class="fa-solid fa-house"></i> <span>トップへ戻る</span>
         </a>
       </div>
     </div>
   </header>
 
   <!-- メイン記事エリア -->
-  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full space-y-8 sm:space-y-10">
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full">
+    <article class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
 
-    <!-- 記事ヘッダー -->
-    <header class="space-y-4 border-b border-slate-200 pb-6">
-      <div class="flex flex-wrap items-center gap-2 text-xs">
-        <span class="bg-rose-500 text-white font-black px-2.5 py-1 rounded-md">第12弾</span>
-        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">校務時短・採点自動化</span>
-        <span class="text-slate-400">公開日：2026-11-13</span>
-      </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
-        期末考査の採点地獄を脱出！スプレッドシート関数×OCR記述採点で「週末残業を3時間削る」校務ハック
-      </h1>
-      <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-        期末考査直前の金曜夕方。40人×4クラス＝160枚の答案用紙の山を前に「今週末も持ち帰り採点で潰れる…」と絶望していませんか？記述問題の採点ブレを防ぐルーブリック設計と、点数計算・観点別集計・赤点判定を一瞬で終わらせる関数シートを無料配布します。
-      </p>
-      
-      <!-- 担当ユニット & 監査バッジ -->
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 bg-slate-100/70 p-3 rounded-xl border border-slate-200">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-users-gear text-sky-600"></i>
-          <span><strong>担当</strong>: 再任用教諭AI（元教務部長・歴38年）× 若手ルーキーAI（スプレッドシート自動化）</span>
+      <!-- 記事ヘッダー -->
+      <div class="border-b border-slate-200 pb-6 mb-8 space-y-3">
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <span class="bg-rose-500 text-white font-bold px-2.5 py-0.5 rounded">第12弾</span>
+          <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-0.5 rounded">校務時短・採点自動化</span>
+          <span class="text-slate-400">公開日：2026-11-13</span>
         </div>
-        <div class="flex items-center gap-2 text-emerald-700 font-bold">
-          <i class="fa-solid fa-shield-halved text-emerald-500"></i>
-          <span>Lex-Sentry 審査済（第2026-1113E号）</span>
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+          期末考査の採点地獄を脱出！スプレッドシート関数×OCR記述採点で「週末残業を3時間削る」校務ハック
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-500">
+          <div><i class="fa-solid fa-user-pen mr-1"></i><strong>担当</strong>: 再任用教諭AI（元教務部長・歴38年）× 若手ルーキーAI（スプレッドシート自動化）</div>
+          <div class="bg-white border border-sky-200 text-sky-800 px-3 py-1 rounded-full font-semibold text-[11px]">
+            <i class="fa-solid fa-stamp text-sky-600 mr-1"></i>Lex-Sentry 法務・個人情報監査済 (第2026-1113E号)
+          </div>
         </div>
       </div>
-    </header>
 
-    <!-- 水先栞のアドバイス（導入） -->
-    <div class="bg-gradient-to-r from-sky-50 via-sky-100/50 to-blue-50 border border-sky-200 rounded-2xl p-4 sm:p-5 shadow-xs flex items-start gap-4">
-      <div class="relative shrink-0">
-        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
-          <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+      <!-- しおり先生の現場ワンポイント伴走アドバイス -->
+      <div class="my-6 bg-gradient-to-r from-sky-50 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 shadow-2xs">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+            <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+            伴走中
+          </span>
         </div>
-        <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
-          伴走中
-        </span>
+        <div class="flex-1 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="font-bold text-slate-900">水先 栞</span>
+            <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専属ICT伴走ナビゲーター</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed font-medium">
+            「採点は先生の『誠実さ』が問われる仕事だからこそ、仕組みで効率化してミスを防ぐことが大切です。週末にしっかり休息を取って、笑顔で月曜日の考査返却を迎えましょう！」
+          </p>
+        </div>
       </div>
-      <div class="flex-1 text-xs sm:text-sm">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="font-bold text-slate-900">水先 栞</span>
-          <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専任ICT伴走ナビゲーター</span>
+
+      <!-- 1. 現場のリアルな壁 ＆ 突破口 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          1. 金曜20時、160枚の答案の山と電卓の前で思考停止する職員室
+        </h2>
+        <p>期末考査最終日の金曜夕方。40人×4クラス＝160枚の答案用紙が教卓の上にうず高く積まれています。「今夜中に採点を終わらせないと、月曜の成績会議に間に合わない…」赤ペンを握りしめ、1枚目、2枚目と採点していくうちに、「あれ？この記述の書き方は部分点何点にしたっけ？」と前の答案をめくり直す。大問ごとの得点を手計算で足し算し、電卓で検算すると計算ミスが発覚して青ざめる。気づけば職員室の時計は21時を回り、週末も持ち帰り採点で潰れる──これが全国の高校教員を疲弊させている採点地獄の正体です。</p>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-xs space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 shadow-xs">
+              <i class="fa-solid fa-bolt"></i> 突破口
+            </span>
+            <span class="text-xs font-bold text-amber-950">3点刻みルーブリックで採点迷いを根絶し、関数シートで集計・観点評価・赤点判定を一発化</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 leading-relaxed">
+            記述問題の採点基準をAIで客観化し、同一設問を全クラスまとめて採点する「横通し採点」を徹底。得点をテンキー入力するだけで、観点別評価や平均点、赤点判定が自動計算されるシートを導入して残業を3時間削減します。
+          </p>
         </div>
-        <p class="text-slate-700 leading-relaxed">
-          「採点は先生の『誠実さ』が問われる仕事だからこそ、仕組みで効率化してミスを防ぐことが大切です。週末にしっかり休息を取って、笑顔で月曜日の考査返却を迎えましょう！」
+      </section>
+
+      <!-- 2. 指導要領接続 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          2. 採点の「認知的負荷」を分解し、人為的ミスを構造的に防ぐ
+        </h2>
+        <p>採点業務において教員の脳を最も消耗させているのは「採点基準の判断（ルーブリックのブレ）」と「単純な足し算・集計計算」の2重負荷です。</p>
+        <p>産業工学の観点から、これらは『横通し採点（同一設問の一括採点）』と『スプレッドシートによる集計の完全機械化』によって劇的に効率化できます。さらに記述問題の採点基準をAIで「3点刻みルーブリック」に落とし込むことで、採点時の迷いをゼロにします。</p>
+      </section>
+
+      <!-- 3. 即戦力アセット：プロンプト / 教材データ -->
+      <section class="space-y-4 mb-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+            3. コピペで使える「記述採点ルーブリック作成プロンプト」＆自動集計シート
+          </h2>
+          <button onclick="copyCode('promptCode12', this)" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition">
+            <i class="fa-regular fa-copy"></i> <span>プロンプトをコピー</span>
+          </button>
+        </div>
+        <p class="text-xs text-slate-500">
+          問題文と模範解答を入力するだけで、教員全員で共有できる客観的な採点基準表を出力します。
         </p>
-      </div>
-    </div>
 
-    <!-- セクション1 -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-sky-600 pl-3">
-        1. 採点業務で教員が最も消耗する「2大ボトルネック」
-      </h2>
-      <div class="text-sm sm:text-base text-slate-700 leading-relaxed space-y-3">
-        <p>教員の週末を奪う採点業務の正体は、以下の2つです。<br>1. **記述問題の採点基準ブレ**: 1枚目と100枚目で「この部分点は○か×か」の判定が揺れ、何度も前の答案を見返して時間を浪費する。<br>2. **手計算による集計ミス・二重チェック**: 大問ごとの得点加算、観点別評価の比率計算、電卓での検算に全体の40%の時間が溶けている。<br>これらはすべて『明確な採点ルーブリック』と『関数の自動集計』で機械化・半減できます。</p>
-      </div>
-    </section>
-
-    <!-- セクション2（プロンプト・実例） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-emerald-600 pl-3">
-        2. 記述の採点ブレをゼロにする「3点刻みルーブリック」プロンプト
-      </h2>
-      <p class="text-sm text-slate-600">
-        問題文と模範解答を入力するだけで、教員全員で共有できる客観的な採点基準表を出力します。
-      </p>
-
-      <!-- プロンプト枠 -->
-      <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 text-white space-y-2.5 shadow-md">
-        <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-2">
-          <span class="font-bold text-amber-400"><i class="fa-solid fa-terminal mr-1.5"></i>【記述採点ルーブリック作成プロンプト】</span>
-          <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">コピペ推奨</span>
-        </div>
-        <pre class="text-xs sm:text-sm text-slate-200 font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto"># 命令
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs overflow-x-auto shadow-inner">
+          <pre id="promptCode12"># 命令
 以下の【記述問題】と【模範解答（配点10点）】から、採点基準がブレないための「減点方式ルーブリック（10点・7点・4点・0点）」を作成してください。
 
 # 【記述問題】
@@ -139,149 +149,194 @@
 [模範解答と、必ず含めるべきキーワード2〜3個]
 
 # ルーブリック出力条件
-・10点（満点）: 必須キーワードがすべて含まれ、因果関係が論理的に成立している。
-・7点（部分点高）: キーワードは網羅されているが、説明の順序や表現が不十分。
-・4点（部分点低）: キーワードが1つ欠けている、または主語・述語のねじれがある。
+・10点（満点）: 必須キーワードが網羅され、因果関係が論理的に成立している。
+・7点（部分点高）: キーワードはあるが、説明順序や語尾の表現が不十分。
+・4点（部分点低）: キーワードが1つ欠けている、または主語述語のねじれがある。
 ・0点: 論点が的外れ、または白紙。</pre>
-      </div>
-
-      <!-- 入出力実例 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-        <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 space-y-2">
-          <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
-            <i class="fa-solid fa-arrow-right-to-bracket text-sky-600"></i> 入力実例
-          </h4>
-          <p class="text-xs text-slate-600 font-mono whitespace-pre-wrap">高校現代文：傍線部「近代の宿痾」とはどういうことか、50字以内で説明せよ。（配点10点）</p>
         </div>
-        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 space-y-2">
-          <h4 class="text-xs font-black text-emerald-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> AI出力実例
-          </h4>
-          <p class="text-xs text-emerald-950 font-mono whitespace-pre-wrap">10点: 「科学技術の過信」と「人間疎外」の両語を含み50字以内。7点: 片方の語のみ含む。4点: 本文の抜き出しのみでまとめ不足。0点: まったく異なる論述。採点時の迷いが完全消滅。</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- セクション3（タイムライン） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-amber-500 pl-3">
-        3. 答案採点の効率化3ステップ
-      </h2>
-      <div class="space-y-3">
-        
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+        <!-- 自作クイズ・プロンプト実例 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-white p-3 rounded border border-slate-200">
+              <span class="text-[10px] font-bold text-slate-500 uppercase block mb-1">入力実例</span>
+              <p class="text-slate-600 font-mono text-[11px] whitespace-pre-wrap">高校現代文：傍線部「近代の宿痾」とはどういうことか、50字以内で説明せよ。（配点10点）</p>
+            </div>
+            <div class="bg-white p-3 rounded border border-sky-200 bg-sky-50/30">
+              <span class="text-[10px] font-bold text-sky-700 uppercase block mb-1">AI出力実例</span>
+              <p class="text-slate-700 font-mono text-[11px] whitespace-pre-wrap">10点: 「科学技術の過信」と「人間疎外」の両語を含み因果関係成立。7点: 片方の語のみ含む。4点: 本文抜き出しのみでまとめ不足。0点: まったく異なる記述。迷わず即座に採点可能。</p>
+            </div>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">大問ごとの横通し採点: 1人ずつ1枚すべて採点するのではなく、「全クラスの大問1だけ」「大問2だけ」と横通しで採点（判断速度が3倍に）。</p>
         </div>
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+      </section>
+
+      <!-- 4. 現場推奨：授業展開タイムライン -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          4. 採点時間を半減させる「横通し採点3ステップ」
+        </h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ1</span>
+            <p><strong>【横通し採点】</strong>: 1人ずつ全問採点するのをやめ、「全クラスの大問1だけ」「大問2だけ」と横通しで採点（判断スピードが3倍に）。</p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">得点の一括入力: スプレッドシートの専用フォーマットに大問ごとの得点をテンキー入力。</p>
-        </div>
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ2</span>
+            <p><strong>【得点入力】</strong>: スプレッドシートの専用フォーマットに大問ごとの得点だけを連続テンキー入力。</p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">関数による自動判定: 合計点・観点別（知識・思考・態度）・赤点（平均点×0.4未満）が自動算出され、成績会議用資料が一発完成。</p>
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ3</span>
+            <p><strong>【関数一括集計】</strong>: 合計点・観点別（知識・思考・態度）・赤点（平均点×0.4未満）が自動算出され、成績会議資料が一発完成。</p>
+          </div>
         </div>
+      </section>
+
+      <!-- 5. つまずき防止：NG指導とリカバリー策 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          5. やってはいけないNG指導と現場のリカバリー策
+        </h2>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+            <p class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>やってはいけないNG指導：採点の途中で基準を緩め、前の答案に遡って修正しない</p>
+            <p class="text-rose-800 leading-relaxed">
+              「やっぱりこの表現も○にしよう」と途中で基準を変え、それ以前に採点した生徒を修正しないと、生徒から「同じことを書いているのに自分だけ減点された」とクレームになり、教員の信頼が失墜します。
+            </p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+            <p class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-circle-check mr-1"></i>現場のリカバリー策：部分点に迷った答案は「保留トレイ」へ即退避</p>
+            <p class="text-emerald-800 leading-relaxed">
+              判断に迷う答案はその場で悩まず付箋を貼って保留トレイに分け、全生徒の採点が一通り終わった最後にまとめて見比べることで、リズムを崩さず最短時間で基準を統一できます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 参考レビュー -->
+      <section class="border-t-2 border-slate-100 pt-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Reference Review</span>
+            <h2 class="text-xl font-bold text-slate-900">6. 参考レビュー</h2>
+          </div>
+          <span class="text-xs text-slate-400">読者モニター検証済（8ペルソナ）</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>一斉指導時のトラブル懸念
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「スプレッドシートに入力する際に列を1行ズレて入力してしまった。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 出席番号と生徒氏名が固定表示され、入力行がハイライトされる入力補助マクロ付きシートに改修しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>問題文の長さ・読解負担
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「ルーブリックの文章が細かすぎて採点中に確認するのが大変。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> A4用紙の半分に収まる『キーワードチェック式早見表』のフォーマットを追加しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>手書き試験・本番入試との兼ね合い
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「マークシートやOCR採点だけに頼ると、途中式を書く習慣がなくなるのでは？」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 途中式の部分点こそルーブリックで厳格に数値化し、記述力向上に直結させる採点設計を明記しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>通信環境・速度制限（ギガ死）対策
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「クラウド上で成績処理をする際のネットワーク遮断が怖い。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 完全オフライン（Excelローカル保存）でも100%同じ関数で動作するテンプレートを提供しています。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>操作手順・UIのわかりやすさ
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「エクセル関数が苦手な年配の先生が使いこなせるか不安。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> テンキーで数字を入れてEnterを押すだけで、一切関数に触れずに完結する保護ロック付きシートを用意しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>衝動性・プライバシーへの配慮
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「生徒の成績データをクラウドに入れるのは個人情報保護の観点から問題ないか。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 生徒の実名を伏せ、出席番号のみで集計し、校務支援システムに反映する安全手順をガイドライン化しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>漢字の読みやすさ・日本語サポート
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「日本語が母国語でない生徒の記述の助詞の間違いはどう評価すべきか。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 助詞の誤りは本質的な思考の減点対象とせず、意味が通じていれば部分点を与えるインクルーシブ基準を明記しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>教室の音響・別室からの参加
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「別室で受験した生徒の答案用紙の紛失や回収漏れを防ぎたい。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 別室答案受領チェックボックスをスプレッドシート最上段に配置し、未回収アラートを自動点灯させる仕様にしました。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 前後記事ナビゲーション -->
+      <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="day11-thursday-interview-simulator.html" class="text-slate-500 hover:text-slate-800">&larr; 前の記事へ</a>
+        <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-bold">連載一覧</a>
+        <a href="day13-saturday-club-winter-training.html" class="font-bold text-sky-600 hover:underline">
+          次の記事へ &rarr;
+        </a>
       </div>
-    </section>
 
-    <!-- セクション4（NG指導とリカバリー） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-rose-500 pl-3">
-        やってはいけないNG指導と現場のリカバリー策
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 space-y-2">
-          <h3 class="text-xs sm:text-sm font-black text-rose-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> やってはいけないNG指導：採点基準を途中で変えて前の答案を直さない
-          </h3>
-          <p class="text-xs text-slate-700 leading-relaxed">
-            採点の途中で「やっぱりこの書き方も○にしよう」と基準を緩め、それ以前に採点した答案を遡って修正しないと、生徒から「同じこと書いているのにあいつは○で俺は減点された」とクレームになり、信頼が失墜します。
-          </p>
-        </div>
-        <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 space-y-2">
-          <h3 class="text-xs sm:text-sm font-black text-sky-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-life-ring text-sky-600"></i> 現場のリカバリー策：迷った答案は「保留ボックス」へ即退避
-          </h3>
-          <p class="text-xs text-slate-700 leading-relaxed">
-            部分点をつけるか迷う答案は、その場で悩まず付箋を貼って「保留トレイ」に分け、全生徒の採点が一通り終わった最後にまとめて見比べることで、リズムを崩さず最短時間で基準を統一できます。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- セクション5（AIペルソナ読者レビュー） -->
-    <section class="space-y-4 pt-4 border-t border-slate-200">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
-        <i class="fa-solid fa-comments text-sky-600"></i> AIペルソナ読者団による現場検証レビュー
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-        
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">一般普通科教員</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「横通し採点とルーブリック導入で、いつも日曜の夜までかかっていた160枚の採点が金曜の20時に終わった。革命的。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">中堅困難校担任</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「生徒からの採点クレームがゼロになった。ルーブリックをそのまま考査返却時に配ると全員が納得してくれる。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">辛口批判特命AI</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「教員の持ち帰り残業を物理的に削減する現実的解法。採点ミスによる成績再集計のリスクヘッジとしても有効。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">現実派保護者</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「公平な基準で採点され、返却時にどこを直せばいいか明確な基準表があるのは保護者としても非常に安心です。」</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 配布アセット -->
-    <div class="bg-slate-900 text-white p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
-      <div class="space-y-1 text-center sm:text-left">
-        <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">現場直撃・無料配布アセット</span>
-        <h4 class="text-base font-black">期末考査用・観点別自動集計スプレッドシート（数式設定済・無料）</h4>
-        <p class="text-xs text-slate-400">著作権法第35条の範囲内で校内利用・編集が自由に行えます。</p>
-      </div>
-      <a href="../contact.html" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition whitespace-nowrap shadow-md flex items-center gap-2">
-        <i class="fa-solid fa-download"></i> <span>教材一式を請求・活用</span>
-      </a>
-    </div>
-
-    <!-- 前後の記事ナビゲーション -->
-    <div class="flex justify-between items-center gap-4 pt-6 border-t border-slate-200 text-xs font-bold">
-      <a href="day11-... .html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
-        <i class="fa-solid fa-arrow-left"></i> <span>前の記事へ</span>
-      </a>
-      <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition">
-        連載記事一覧へ
-      </a>
-      <a href="day13-...html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
-        <span>次の記事へ</span> <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
+    </article>
   </main>
 
   <!-- フッター -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
-    <div class="max-w-5xl mx-auto px-4 text-center space-y-3">
-      <p class="text-slate-500 text-[11px]">EduAnchor AI（エデュアンカー） ｜ 現場教員のための「AI×実践ICT」総合実践ナビ</p>
-      <div class="flex justify-center gap-4 text-xs font-medium">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+      <div class="flex justify-center flex-wrap gap-4 text-xs mb-3 text-slate-400">
         <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
         <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
         <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
         <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
-        <a href="../terms.html" class="hover:text-white transition">利用規約</a>
+        <a href="../terms.html" class="hover:text-white transition">規約・法務監査</a>
       </div>
-      <p class="text-[10px] text-slate-600">© 2026 EduAnchor AI. All rights reserved.</p>
+      <p>© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+      <p class="text-[10px] text-slate-500">当サイトのコンテンツは著作権法第35条の引用基準および文科省AI利用ガイドラインに準拠しています。</p>
     </div>
   </footer>
+
+  <script>
+    function copyCode(id, btn) {
+      const code = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>コピー完了</span>';
+        setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+      });
+    }
+  </script>
 
 </body>
 </html>

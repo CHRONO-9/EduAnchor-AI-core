@@ -24,7 +24,7 @@
     <div class="max-w-5xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-2">
         <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第18弾</span>
-        <span>第3週 日刊実践連載 ｜ 朝6:30配信</span>
+        <span>探究・実習・AIリテラシー ｜ 第3週 ｜ 朝6:30日刊配信</span>
       </div>
       <div class="flex items-center gap-4 text-xs">
         <span class="text-slate-400"><i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合</span>
@@ -47,89 +47,99 @@
       <div class="flex items-center gap-3">
         <a href="../articles.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 transition">実践記事一覧</a>
         <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
-          <i class="fa-solid fa-house"></i> <span>トップ</span>
+          <i class="fa-solid fa-house"></i> <span>トップへ戻る</span>
         </a>
       </div>
     </div>
   </header>
 
   <!-- メイン記事エリア -->
-  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full space-y-8 sm:space-y-10">
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full">
+    <article class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
 
-    <!-- 記事ヘッダー -->
-    <header class="space-y-4 border-b border-slate-200 pb-6">
-      <div class="flex flex-wrap items-center gap-2 text-xs">
-        <span class="bg-amber-500 text-white font-black px-2.5 py-1 rounded-md">第18弾</span>
-        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">探究・実習・AIリテラシー</span>
-        <span class="text-slate-400">公開日：2026-11-19</span>
-      </div>
-      <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
-        実習レポート・課題研究の「AI丸写し」を見破り指導へ変える！ルーブリック評価自動化プロンプト
-      </h1>
-      <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-        「生徒が提出した実習レポートの考察が、やけに流暢で難しい言葉ばかり並んでいる…」これ、ほぼ確実にChatGPTの丸写しです。AI生成テキストを禁止して叱るのではなく、AIの出力と本人の実際の失敗・手触り感を対比させることで、本物の考察力を育てる評価基準を提示します。
-      </p>
-      
-      <!-- 担当ユニット & 監査バッジ -->
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 bg-slate-100/70 p-3 rounded-xl border border-slate-200">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-users-gear text-sky-600"></i>
-          <span><strong>担当</strong>: 実務・技術科教員AI（工業・商業歴22年）× 若手ルーキーAI（情報科）</span>
+      <!-- 記事ヘッダー -->
+      <div class="border-b border-slate-200 pb-6 mb-8 space-y-3">
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <span class="bg-amber-500 text-white font-bold px-2.5 py-0.5 rounded">第18弾</span>
+          <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-0.5 rounded">探究・実習・AIリテラシー</span>
+          <span class="text-slate-400">公開日：2026-11-19</span>
         </div>
-        <div class="flex items-center gap-2 text-emerald-700 font-bold">
-          <i class="fa-solid fa-shield-halved text-emerald-500"></i>
-          <span>Lex-Sentry 審査済（第2026-1119D号）</span>
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+          実習レポート・課題研究の「AI丸写し」を見破り指導へ変える！ルーブリック評価自動化プロンプト
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-500">
+          <div><i class="fa-solid fa-user-pen mr-1"></i><strong>担当</strong>: 実務・技術科教員AI（工業・商業歴22年）× 若手ルーキーAI（情報科）</div>
+          <div class="bg-white border border-sky-200 text-sky-800 px-3 py-1 rounded-full font-semibold text-[11px]">
+            <i class="fa-solid fa-stamp text-sky-600 mr-1"></i>Lex-Sentry 法務・個人情報監査済 (第2026-1119D号)
+          </div>
         </div>
       </div>
-    </header>
 
-    <!-- 水先栞のアドバイス（導入） -->
-    <div class="bg-gradient-to-r from-sky-50 via-sky-100/50 to-blue-50 border border-sky-200 rounded-2xl p-4 sm:p-5 shadow-xs flex items-start gap-4">
-      <div class="relative shrink-0">
-        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
-          <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+      <!-- しおり先生の現場ワンポイント伴走アドバイス -->
+      <div class="my-6 bg-gradient-to-r from-sky-50 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 shadow-2xs">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+            <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+            伴走中
+          </span>
         </div>
-        <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
-          伴走中
-        </span>
+        <div class="flex-1 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="font-bold text-slate-900">水先 栞</span>
+            <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専属ICT伴走ナビゲーター</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed font-medium">
+            「AI時代だからこそ、人間が直接手で触れ、失敗した体験の価値が何倍にも高まっています。失敗を恐れず正直に書いたレポートを、先生が全力で褒めてあげてくださいね！」
+          </p>
+        </div>
       </div>
-      <div class="flex-1 text-xs sm:text-sm">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="font-bold text-slate-900">水先 栞</span>
-          <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専任ICT伴走ナビゲーター</span>
+
+      <!-- 1. 現場のリアルな壁 ＆ 突破口 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          1. 提出された実習レポートの考察が、やけに流暢な美辞麗句で埋まる違和感
+        </h2>
+        <p>11月下旬の実習・探究レポート提出日。集まったレポートをめくる教員の眉間にシワが寄ります。「本実習における切削加工の熱伝導率は、持続可能な製造業の文脈において……」。普段の授業では漢字も書けない生徒が、大学教授のような流暢な日本語で考察を埋めている。明らかにChatGPTの丸写しです。教員が「これAIで書いただろ！」と問い詰めても、生徒は「自分で書きました」と言い張り、水掛け論に。AI検出ソフトにかけても確証は得られず、教員は採点の基準を見失って頭を抱えます。</p>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-xs space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 shadow-xs">
+              <i class="fa-solid fa-bolt"></i> 突破口
+            </span>
+            <span class="text-xs font-bold text-amber-950">「AI禁止」を捨て、AIには絶対に書けない「五感の記録・失敗データ」を最高評価にする</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 leading-relaxed">
+            一般的な理論まとめはAIに任せ、生徒には「作業中に手が震えたこと」「煙の匂い」「寸法が2ミリ狂った失敗の生データ」を書かせるルーブリックへ転換。一次情報の有無で評価し、AI利用を健全な探究へ昇華させます。
+          </p>
         </div>
-        <p class="text-slate-700 leading-relaxed">
-          「AI時代だからこそ、人間が直接手で触れ、失敗した体験の価値が何倍にも高まっています。失敗を恐れず正直に書いたレポートを、先生が全力で褒めてあげてくださいね！」
+      </section>
+
+      <!-- 2. 指導要領接続 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          2. 新学習指導要領における「一次情報の価値」と情報活用能力
+        </h2>
+        <p>文科省が示す初等中等教育における生成AI利用ガイドラインでは、「AIの出力を鵜呑みにせず、自らの体験や実験結果と照らし合わせて批判的に吟味する態度」の育成が強く求められています。</p>
+        <p>レポートの評価基準そのものをアップデートし、ネット上の知識の要約ではなく『現場で自分が何を感じ、何に失敗し、どうリカバリーしたか』をA評価に据えることで、コピペを構造的に無力化します。</p>
+      </section>
+
+      <!-- 3. 即戦力アセット：プロンプト / 教材データ -->
+      <section class="space-y-4 mb-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+            3. コピペで使える「一次情報重視ルーブリック作成プロンプト」
+          </h2>
+          <button onclick="copyCode('promptCode18', this)" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition">
+            <i class="fa-regular fa-copy"></i> <span>プロンプトをコピー</span>
+          </button>
+        </div>
+        <p class="text-xs text-slate-500">
+          以下のプロンプトで、生徒の実習レポートを「一次情報の有無」に基づいて客観評価する基準表を出力します。
         </p>
-      </div>
-    </div>
 
-    <!-- セクション1 -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-sky-600 pl-3">
-        1. なぜ「AI使用禁止」のルールは破綻するのか？
-      </h2>
-      <div class="text-sm sm:text-base text-slate-700 leading-relaxed space-y-3">
-        <p>「レポートへのAI利用を一切禁止する」と通達しても、生徒は隠れて使い、教員は「これはAIが書いたのか？」と疑心暗鬼になって検出ツールとにらめっこする不毛なイタチごっこが始まります。<br>大切なのは、AIの利用を禁止することではなく、**『AIには絶対に書けない、現場の一次情報（自分の五感の記録・失敗した生データ）』**を評価の核に据えることです。</p>
-      </div>
-    </section>
-
-    <!-- セクション2（プロンプト・実例） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-emerald-600 pl-3">
-        2. AI丸写しを無力化するルーブリック評価プロンプト
-      </h2>
-      <p class="text-sm text-slate-600">
-        以下のプロンプトで、生徒の実習レポートを「一次情報の有無」に基づいて客観評価する基準表を出力します。
-      </p>
-
-      <!-- プロンプト枠 -->
-      <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 text-white space-y-2.5 shadow-md">
-        <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-2">
-          <span class="font-bold text-amber-400"><i class="fa-solid fa-terminal mr-1.5"></i>【一次情報重視ルーブリック生成プロンプト】</span>
-          <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">コピペ推奨</span>
-        </div>
-        <pre class="text-xs sm:text-sm text-slate-200 font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto"># 命令
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs overflow-x-auto shadow-inner">
+          <pre id="promptCode18"># 命令
 以下の【実習・課題研究テーマ】において、AIによる表面的なまとめを排し、生徒自身の生きた学びを正当に評価する「4段階ルーブリック」を作成してください。
 
 # 【実習・課題研究テーマ】
@@ -140,145 +150,190 @@
 2. B（優）: 実習の手順とデータは正確に記録されているが、考察が一般的な理論のまとめにとどまる。
 3. C（可）: データや考察の記述が抽象的で、本人の直接的な試行錯誤の形跡が薄い。
 4. D（再提出）: インターネットやAIの出力をそのまま貼り付けた痕跡があり、生データとの乖離がある。</pre>
-      </div>
-
-      <!-- 入出力実例 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-        <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 space-y-2">
-          <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
-            <i class="fa-solid fa-arrow-right-to-bracket text-sky-600"></i> 入力実例
-          </h4>
-          <p class="text-xs text-slate-600 font-mono whitespace-pre-wrap">工業高校：旋盤での鉄鋼切削加工実習。</p>
         </div>
-        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 space-y-2">
-          <h4 class="text-xs font-black text-emerald-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> AI出力実例
-          </h4>
-          <p class="text-xs text-emerald-950 font-mono whitespace-pre-wrap">A評価基準: 「切削時の煙の匂いや切削音の変化、バイトの送り速度を上げた際に削り面が粗くなった失敗データが記録され、なぜその現象が起きたかが考察されていること」。AIには決して書けない「泥臭い現場の事実」を最高評価に設定。</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- セクション3（タイムライン） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-amber-500 pl-3">
-        3. 授業での指導アナウンス（3分）
-      </h2>
-      <div class="space-y-3">
-        
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+        <!-- 自作クイズ・プロンプト実例 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-white p-3 rounded border border-slate-200">
+              <span class="text-[10px] font-bold text-slate-500 uppercase block mb-1">入力実例</span>
+              <p class="text-slate-600 font-mono text-[11px] whitespace-pre-wrap">工業高校：旋盤での鉄鋼切削加工実習。</p>
+            </div>
+            <div class="bg-white p-3 rounded border border-sky-200 bg-sky-50/30">
+              <span class="text-[10px] font-bold text-sky-700 uppercase block mb-1">AI出力実例</span>
+              <p class="text-slate-700 font-mono text-[11px] whitespace-pre-wrap">A評価基準: 「切削時の煙の匂いや切削音の変化、バイトの送り速度を上げた際に削り面が粗くなった失敗データが記録され、なぜその現象が起きたかが考察されていること」。AIには決して書けない「泥臭い現場の事実」を最高評価に設定。</p>
+            </div>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">課題提示時: 「ネットやAIで調べた綺麗なまとめはいりません。あなたが実際に失敗したこと、手が震えたこと、予想と違ったことだけを書いてください。」</p>
         </div>
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+      </section>
+
+      <!-- 4. 現場推奨：授業展開タイムライン -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          4. 授業での指導アナウンス3ステップ
+        </h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ1</span>
+            <p><strong>【課題提示時のアナウンス】</strong>: 「ネットやAIで調べた綺麗なまとめはいりません。あなたが実際に失敗したこと、手が震えたことだけを書いてください。」</p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">レポート回収時: 「AIを使った人は、AIに何を聞いて、どこが自分の現場体験と違っていたかを1行添えて提出してね。」</p>
-        </div>
-        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
-          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-            <i class="fa-solid fa-check text-[11px]"></i>
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ2</span>
+            <p><strong>【AI対話ログの添付】</strong>: 「AIを使った人は、プロンプトと回答を印刷して添付し、どこが自分の現場体験と違ったかを1行添えてね。」</p>
           </div>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">フィードバック: 生徒の失敗エピソードを取り上げて「この気づきこそ現場のプロの目線だ！」と教室全体で称賛。</p>
+          <div class="flex items-start gap-3">
+            <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">ステップ3</span>
+            <p><strong>【失敗の教室全体称賛】</strong>: 生徒の失敗エピソードを取り上げて「この気づきこそ現場のプロの目線だ！」と称賛。</p>
+          </div>
         </div>
+      </section>
+
+      <!-- 5. つまずき防止：NG指導とリカバリー策 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+          5. やってはいけないNG指導と現場のリカバリー策
+        </h2>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+            <p class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>やってはいけないNG指導：AI検出ソフトの判定スコアだけを根拠に生徒を犯人扱いする</p>
+            <p class="text-rose-800 leading-relaxed">
+              AI検出ツールは誤判定が極めて多く、自力で一生懸命書いた生徒を「AIで書いただろ」と決めつけて冤罪を生むリスクがあります。ツールの判定で叱るのではなく、レポートの中身について口頭で質問してください。
+            </p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+            <p class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-circle-check mr-1"></i>現場のリカバリー策：「口頭での1分インタビュー」による本人確認</p>
+            <p class="text-emerald-800 leading-relaxed">
+              怪しいレポートを見つけたら、放課後に「ここすごく詳しく書けてるね！この実験器具って実際どうやって動かしたの？」と1分質問します。自分で書いた生徒は即答でき、コピペ生徒は口ごもるため、叱らずに再提出を促せます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 参考レビュー -->
+      <section class="border-t-2 border-slate-100 pt-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Reference Review</span>
+            <h2 class="text-xl font-bold text-slate-900">6. 参考レビュー</h2>
+          </div>
+          <span class="text-xs text-slate-400">読者モニター検証済（8ペルソナ）</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>一斉指導時のトラブル懸念
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「真面目に教科書通り書いた生徒がB評価になって不満を漏らした。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 『手順通りのまとめも素晴らしい。次はあなた自身の気づきを1行足せばA評価になるよ』と加点方式で励ます指針を明記しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>問題文の長さ・読解負担
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「ルーブリックの評価基準の言葉が難しくて生徒に伝わらない。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 生徒配布用に『失敗を書いたら高得点！』と直感的にわかるマンガ風の自己評価チェック表を追加しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>手書き試験・本番入試との兼ね合い
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「大学の総合型選抜の小論文指導にも応用できるか。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 志望理由書や探究小論文において、AI文章と差別化する『自分の五感エピソードの組み込み法』として応用可能と明記しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>通信環境・速度制限（ギガ死）対策
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「スマホがない生徒はAIとの対話ログを提出できない。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> AI利用はあくまで任意とし、完全手書きのスケッチやメモの添付でも全く同等にA評価が得られる規準にしました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>操作手順・UIのわかりやすさ
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「AIの対話ログのスクリーンショットをどう提出させればいいか。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> Google Classroomの課題提出欄に画像を添付する手順を3ステップで図解したマニュアルを用意しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>衝動性・プライバシーへの配慮
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「失敗を書くのが恥ずかしくてプライドが許さない生徒がいる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 『エジソンも1万回失敗した』と失敗の価値を語り、失敗数が多いほど称賛される学級文化を醸成する声かけを記載しました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>漢字の読みやすさ・日本語サポート
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「日本語で観察記録をうまく言語化できない生徒がいる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 写真やイラストに矢印を書き込むだけでも立派な一次情報として認めるビジュアル評価基準を設けました。</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-dots text-sky-500 mr-1"></i>教室の音響・別室からの参加
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「実習に参加できなかった見学生徒のレポート評価はどうするか。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 実習の動画を見て、作業者の危険な動作や改善点を分析する『安全管理者目線の代替課題』を用意しました。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 前後記事ナビゲーション -->
+      <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="day17-wednesday-parent-teacher-conference.html" class="text-slate-500 hover:text-slate-800">&larr; 前の記事へ</a>
+        <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-bold">連載一覧</a>
+        <a href="day19-friday-winter-homework-mission.html" class="font-bold text-sky-600 hover:underline">
+          次の記事へ &rarr;
+        </a>
       </div>
-    </section>
 
-    <!-- セクション4（NG指導とリカバリー） -->
-    <section class="space-y-4">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-rose-500 pl-3">
-        やってはいけないNG指導と現場のリカバリー策
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 space-y-2">
-          <h3 class="text-xs sm:text-sm font-black text-rose-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> やってはいけないNG指導：AI検出ソフトのスコアだけで生徒を犯人扱いする
-          </h3>
-          <p class="text-xs text-slate-700 leading-relaxed">
-            AI検出ツールは誤判定（偽陽性）が極めて多く、自力で一生懸命書いた生徒を「AIで書いただろ」と決めつけて冤罪を生むリスクがあります。ツールの判定で叱るのではなく、レポートの中身について「ここ面白かったけど、実際どういう感触だった？」と直接口頭で質問してください。
-          </p>
-        </div>
-        <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 space-y-2">
-          <h3 class="text-xs sm:text-sm font-black text-sky-800 flex items-center gap-1.5">
-            <i class="fa-solid fa-life-ring text-sky-600"></i> 現場のリカバリー策：「AIとの壁打ち対話ログ」の添付義務化
-          </h3>
-          <p class="text-xs text-slate-700 leading-relaxed">
-            AIを使った場合は、プロンプトとAIの回答のスクリーンショットをレポート末尾に添付させます。AIの出したアイデアをどう取捨選択したかを評価対象にすることで、情報活用能力の育成に昇華させます。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- セクション5（AIペルソナ読者レビュー） -->
-    <section class="space-y-4 pt-4 border-t border-slate-200">
-      <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
-        <i class="fa-solid fa-comments text-sky-600"></i> AIペルソナ読者団による現場検証レビュー
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-        
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">実務・技術科教員</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「現場実習のレポートにぴったり。綺麗なまとめを提出する生徒より、失敗の原因を泥臭く追求した生徒を胸を張ってA評価にできる。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">基礎学力不振生徒</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「文章を上手に書かなくていい、『熱かった』とか『削りすぎて怒られた』って書けば点数がもらえると分かって気が楽になった。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">現実派保護者</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「AIの時代に、教科書の丸暗記ではなく実際の体験を重視してくださる教育方針は本当に素晴らしいと思います。」</p>
-        </div>
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
-          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">辛口批判特命AI</span>
-          <p class="text-xs text-slate-600 leading-relaxed">「AI禁止という不可能な規制を捨て、評価基準自体をアップデートして生徒の探究心を高める極めて論理的なアプローチ。」</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 配布アセット -->
-    <div class="bg-slate-900 text-white p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
-      <div class="space-y-1 text-center sm:text-left">
-        <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">現場直撃・無料配布アセット</span>
-        <h4 class="text-base font-black">実習・探究用ルーブリック評価テンプレート＆対話ログ添付シート</h4>
-        <p class="text-xs text-slate-400">著作権法第35条の範囲内で校内利用・編集が自由に行えます。</p>
-      </div>
-      <a href="../contact.html" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition whitespace-nowrap shadow-md flex items-center gap-2">
-        <i class="fa-solid fa-download"></i> <span>教材一式を請求・活用</span>
-      </a>
-    </div>
-
-    <!-- 前後の記事ナビゲーション -->
-    <div class="flex justify-between items-center gap-4 pt-6 border-t border-slate-200 text-xs font-bold">
-      <a href="day17-... .html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
-        <i class="fa-solid fa-arrow-left"></i> <span>前の記事へ</span>
-      </a>
-      <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition">
-        連載記事一覧へ
-      </a>
-      <a href="day19-...html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
-        <span>次の記事へ</span> <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
+    </article>
   </main>
 
   <!-- フッター -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
-    <div class="max-w-5xl mx-auto px-4 text-center space-y-3">
-      <p class="text-slate-500 text-[11px]">EduAnchor AI（エデュアンカー） ｜ 現場教員のための「AI×実践ICT」総合実践ナビ</p>
-      <div class="flex justify-center gap-4 text-xs font-medium">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+      <div class="flex justify-center flex-wrap gap-4 text-xs mb-3 text-slate-400">
         <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
         <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
         <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
         <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
-        <a href="../terms.html" class="hover:text-white transition">利用規約</a>
+        <a href="../terms.html" class="hover:text-white transition">規約・法務監査</a>
       </div>
-      <p class="text-[10px] text-slate-600">© 2026 EduAnchor AI. All rights reserved.</p>
+      <p>© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+      <p class="text-[10px] text-slate-500">当サイトのコンテンツは著作権法第35条の引用基準および文科省AI利用ガイドラインに準拠しています。</p>
     </div>
   </footer>
+
+  <script>
+    function copyCode(id, btn) {
+      const code = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>コピー完了</span>';
+        setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+      });
+    }
+  </script>
 
 </body>
 </html>
