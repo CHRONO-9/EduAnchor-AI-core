@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「書くことが本当に何もない」生徒用──3つの問いに音声で答えるだけで志望動機・自己PRの骨子ができるAI伴走シート ｜ EduAnchor AI</title>
+  <!-- ファビコン ＆ OGP -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <meta property="og:title" content="「書くことが本当に何もない」生徒用──3つの問いに音声で答えるだけで志望動機・自己PRの骨子ができるAI伴走シート ｜ EduAnchor AI">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/character/shiori_guide_main.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第4弾</span>
+        <span>実務・高卒就職＆推薦入試伴走 ｜ 朝6:30日刊配信</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-slate-400"><i class="fa-solid fa-microphone text-amber-400 mr-1"></i>音声入力ハック</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-sm">
+          <i class="fa-solid fa-anchor text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+          <span class="block text-[9px] text-slate-400 font-medium -mt-1">現場教員のためのAI×実践ICTナビ</span>
+        </div>
+      </a>
+      <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
+        <i class="fa-solid fa-house"></i> <span>トップへ戻る</span>
+      </a>
+    </div>
+
+    <!-- 特集：最新記事 ナビゲーションバー -->
+    <div class="bg-slate-100/90 border-t border-slate-200 overflow-x-auto scrollbar-none">
+      <div class="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 text-xs font-medium whitespace-nowrap">
+        <span class="text-slate-800 font-bold px-1 flex items-center gap-1 shrink-0"><i class="fa-solid fa-layer-group text-sky-600"></i>特集：最新記事～</span>
+        <a href="../index.html#articles" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-1 rounded-full font-bold transition inline-block">すべて</a>
+        <a href="day1-monday-kahoot.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🚀 即効性授業・Kahoot!</a>
+        <a href="day2-tuesday-textbook-translation.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">📖 教科書「現場語」翻訳</a>
+        <a href="day5-friday-exam-fast-factcheck.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">⏱️ 校務・テスト作問時短</a>
+        <a href="day4-thursday-career-audio-statement.html" class="bg-sky-600 text-white border border-sky-600 px-3 py-1 rounded-full font-bold transition shadow-2xs inline-block">🛠️ 実務・高卒就職伴走</a>
+        <a href="day7-sunday-inclusive-offline-ict.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🤝 インクルーシブ・ギガ死対策</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-slate-100 border-b border-slate-200 text-xs py-2 px-4">
+    <div class="max-w-5xl mx-auto flex items-center gap-2 text-slate-500">
+      <a href="../index.html" class="hover:underline">ホーム</a>
+      <span>&rsaquo;</span>
+      <span class="text-slate-700">実務・キャリア伴走</span>
+      <span>&rsaquo;</span>
+      <span class="text-slate-900 font-medium truncate">音声入力でできる自己PR伴走シート</span>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1">
+    <article class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs">
+      
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded">第4弾 就職・進路</span>
+        <span class="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded">2026年11月05日 配信</span>
+        <span class="bg-rose-50 text-rose-700 border border-rose-200 text-xs px-2.5 py-1 rounded font-medium">
+          <i class="fa-solid fa-triangle-exclamation text-rose-500 mr-1"></i>辛口特命AI：美辞麗句排除テスト済
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-tight mb-4">
+        「書くことが本当に何もない」生徒用──3つの問いに音声で答えるだけで志望動機・自己PRの骨子ができるAI伴走シート
+      </h1>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 mb-8">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold text-xs">技</div>
+          <div class="w-8 h-8 rounded-full bg-rose-700 text-white flex items-center justify-center font-bold text-xs -ml-5 border-2 border-white">辛</div>
+          <div>
+            <p class="font-bold text-slate-900">実務・技術科教員AI × 辛口批判特命AI 共同監修</p>
+            <p class="text-[11px] text-slate-500">工業主任（歴22年）× 教育行政アナリスト</p>
+          </div>
+        </div>
+        <div class="bg-white border border-sky-200 text-sky-800 px-3 py-1 rounded-full font-semibold text-[11px]">
+          <i class="fa-solid fa-stamp text-sky-600 mr-1"></i>個人情報完全マスキング監査済
+        </div>
+      </div>
+      <!-- しおり先生の現場ワンポイント伴走アドバイス -->
+      <div class="my-6 bg-gradient-to-r from-sky-50 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 shadow-2xs">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+            <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+            伴走中
+          </span>
+        </div>
+        <div class="flex-1 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="font-bold text-slate-900">水先 栞</span>
+            <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専属ICT伴走ナビゲーター</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed font-medium">
+            「『書くことが何もない』と固まる生徒さん、実はすごく真面目に部活やバイトを頑張っていたりするんですよね。音声で3つ答えてもらうだけで、立派な自己PRの土台が立ち上がりますよ！」
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- 1. 現場のリアルな壁 ＆ 突破口 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-amber-600 pl-3">
+          1. 「志望動機？ 金が欲しいからっす」「自己PR？ 何もない」
+        </h2>
+        <p>
+          原稿用紙を前に2時間座りっぱなしで1行も進まない生徒。生徒の多くは、自分自身の日常を過小評価しており、長文を書くことへの恐怖心から思考が停止しています。
+        </p>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-xs space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 shadow-xs">
+              <i class="fa-solid fa-bolt"></i> 突破口
+            </span>
+            <span class="text-xs font-bold text-amber-950">手書き原稿用紙を捨て、音声入力×泥臭い事実抽出プロンプトで勝負する</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 leading-relaxed">
+            長文が書けない生徒に原稿用紙を渡しても1行も進みません。スマホの音声入力を起動し、「一番面倒だったこと」など日常の3問に口頭で答えさせます。AIには「理念に共鳴」といった薄っぺらい美辞麗句を一切禁止し、生徒が語った具体的な作業事実（品出し、掃除、通学等）から現場企業が最も求める「段取り力・継続力」を抽出させるのが唯一の突破口です。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 指導要領接続 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-amber-600 pl-3">
+          2. キャリア教育と自己調整学習「日常の強み発見」
+        </h2>
+        <p>
+          高等学校学習指導要領におけるキャリア教育の要諦は、「勤労観・職業観の形成」および「自己の良さや可能性の認識」です。
+          しかし、生徒会長や華々しい部活動の実績を持たない生徒は、「自分には社会に誇れる強みがない」と強い自己否定的バイアスに陥りがちです。
+        </p>
+        <p>
+          「言われたことをサボらず続けた」「面倒な棚卸しの順番を工夫した」といった日常の極小の行動の中にこそ、現場企業が喉から手が出るほど欲しい【段取り力・報告力・安全意識】が眠っています。音声入力でそれらを掘り起こし、客観的に言語化するプロセスは、自己肯定感を育む最高峰のキャリア伴走となります。
+        </p>
+      </section>
+
+      <!-- 3. 即戦力アセット -->
+      <section class="space-y-4 mb-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-slate-900 border-l-4 border-amber-600 pl-3">
+            3. 3つの問いに答える「泥臭い肉声・自己PR変換プロンプト」
+          </h2>
+          <button onclick="copyCode('careerPrompt', this)" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition">
+            <i class="fa-regular fa-copy"></i> <span>プロンプトをコピー</span>
+          </button>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-xs sm:text-sm mb-4">
+          <p class="font-bold text-slate-900">【生徒に投げかける3つの音声質問】</p>
+          <p><strong>問1（事実）:</strong> 「最近1年で、一番面倒くさかったけどサボらずにやったことって何？」</p>
+          <p><strong>問2（工夫）:</strong> 「それをやるとき、自分なりに早く終わらせる工夫や、気をつけてたことある？」</p>
+          <p><strong>問3（変化）:</strong> 「それを続けてみて、店長やお客さん、家族に何か言われた？ 自分の気持ちはどう変わった？」</p>
+        </div>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs overflow-x-auto shadow-inner mb-4">
+          <pre id="careerPrompt"># 命令
+あなたは「高卒採用・推薦入試の面接官の心を掴む熟練キャリア指導教員」です。
+以下の【生徒が音声で語った日常のエピソード】を分析し、企業の現場で響く「自己PR・志望動機の骨子（300〜400字）」に整形してください。
+
+# 厳格な制約条件（美辞麗句の徹底排除）
+1. 「貴社の理念に感銘を受け」「持続可能な社会に貢献し」等の優等生フレーズは使用禁止。
+2. 生徒が語った「具体的な作業内容（品出し、掃除、片付け、通学など）」の事実を必ず中心に据えること。
+3. 現場実務で重視される【段取り力・安全意識・継続力・素直な報告連絡相談】のいずれかの強みとして言語化すること。
+4. 生徒自身の口から自然に出る、等身大で誠実な言葉遣いにすること。
+
+# 【生徒が音声で語った日常のエピソード】
+[ここに音声入力された生徒のつぶやきテキストを貼り付け]</pre>
+        </div>
+
+        <!-- 実例ビフォーアフター -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-2">
+            <span class="bg-slate-200 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded">入力実例（生徒の音声テキスト）</span>
+            <h4 class="font-bold text-slate-900">コンビニバイトの品出し</h4>
+            <p class="bg-white p-3 rounded border border-slate-200 text-slate-600 leading-relaxed font-mono text-xs">
+              「ファミマで奥からジュース出すの重くてダルいけど、賞味期限の近いやつを手前に並べるのだけは間違えないように気をつけてた。店長に棚が綺麗って褒められた。」
+            </p>
+          </div>
+          <div class="bg-amber-50/60 border border-amber-200 p-4 rounded-xl space-y-2">
+            <span class="bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">AIの出力実例（自己PR骨子）</span>
+            <h4 class="font-bold text-slate-900">事実から抽出した強み</h4>
+            <div class="bg-white p-3 rounded border border-amber-100 text-slate-800 leading-relaxed text-xs">
+              「私の強みは、目立たない作業でも手順を守り、正確にやり遂げる継続力です。
+              コンビニの品出しでは、賞味期限の確認（先入れ先出し）を徹底し、お客様が取りやすい陳列を意識しました。その結果、店長から『棚が整っていて助かる』と評価をいただきました。貴社の現場においても、決められた安全ルールと手順を誠実に守り、チームに信頼される人材として貢献します。」
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 現場推奨：面談伴走ステップ -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-amber-600 pl-3">
+          4. 放課後10分の個別面談伴走ステップ
+        </h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          <div class="flex items-start gap-3">
+            <span class="bg-amber-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 1</span>
+            <p><strong>【マイク起動（1分）】</strong>: 「書かなくていいから、このスマホに向かってボソボソ喋って」とマイクをONにする。</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="bg-amber-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 2</span>
+            <p><strong>【3問の雑談発問（5分）】</strong>: 教員が「一番面倒だったことは？」「何か工夫した？」と相槌を打ちながら肉声を引き出す。</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="bg-amber-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 3</span>
+            <p><strong>【AI整形と音読確認（4分）】</strong>: プロンプトで一瞬で整形。「ほら、お前のやってたこと、立派な自己PRになるだろ！」と音読させ、生徒の自信を取り戻す。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. つまずき防止：NG指導とリカバリー策 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-amber-600 pl-3">
+          5. ペラペラなAI美辞麗句の丸暗記による「面接即死」を防ぐNG指導
+        </h2>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+            <p class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>やってはいけないNG指導：AIが作った文章を一言一句丸暗記させること</p>
+            <p class="text-rose-800 leading-relaxed">
+              AIが整えた文章を丸暗記させて面接に行かせると、面接官の「具体的にどんな苦労があった？」という突っ込み質問で一瞬で頭が真っ白になり、フリーズして不合格になります。
+            </p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+            <p class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-circle-check mr-1"></i>現場のリカバリー策：「キーワード3つだけ」暗記法</p>
+            <p class="text-emerald-800 leading-relaxed">
+              生徒に覚えさせるのは文章ではなく「①コンビニの品出し」「②賞味期限チェック」「③店長に褒められた」という**事実の3単語だけ**です。「単語さえ覚えておけば、本番は自分の言葉で詰まりながらでも話した方が、現場の面接官には100倍刺さる」と指導してください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 参考レビュー -->
+      <section class="border-t-2 border-slate-100 pt-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Reference Review</span>
+            <h3 class="text-xl font-bold text-slate-900">6. 参考レビュー</h3>
+          </div>
+          <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">読者モニター検証</span>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <!-- レビュー 1 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comment-slash text-rose-500 mr-1"></i>最初の「何もない」への初期対応
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「『3つの問いに答えろ』と言っても、その3つの問いにすら『何もない』と固まる生徒がいる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 「朝起きられた」「遅刻しなかった」等の極小の日常習慣から引き出す超イージー補助質問集を別添しました。</p>
+          </div>
+
+          <!-- レビュー 2 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-microphone text-amber-500 mr-1"></i>文字書きが苦手な生徒の負担軽減
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「手書きで漢字書くの本当に無理だったけど、スマホに喋るだけならオレでもできた！」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 生徒の自然な語りを活かしつつ、面接でそのまま使える話し言葉として定着させます。</p>
+          </div>
+
+          <!-- レビュー 3 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-clipboard-question text-emerald-500 mr-1"></i>面接本番での深掘り質問対策
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「面接本番でAIが作った文章を丸暗記して、突っ込まれて頭が真っ白にならないか心配。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 項目5に「丸暗記厳禁・キーワード3単語暗記法」を明確にルール化しました。</p>
+          </div>
+
+          <!-- レビュー 4 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-person-shelter text-purple-500 mr-1"></i>家庭環境・家事手伝いの自己PR化
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「弟や妹の面倒でバイトも部活もできなかった生徒でも、家事手伝いを自己PRにできるか？」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 「毎日の夕飯作りや下校の迎え」を【高いタイムマネジメント力と責任感】として言語化するプロンプトを追加しました。</p>
+          </div>
+
+          <!-- レビュー 5 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-align-left text-blue-500 mr-1"></i>発問の文字数・短文化
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「質問の言葉が長いと理解できない。『一番面倒だったことって何？』くらい短くしてほしい。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 質問文を中学生向けの短文（1行）にリライトし、ひらがな表記のルビシートを用意しました。</p>
+          </div>
+
+          <!-- レビュー 6 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-gamepad text-pink-500 mr-1"></i>好きな話題からの軌道修正
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「自分の好きなゲームの話ばかりペラペラ喋って脱線してしまう生徒をどう誘導すればいいか？」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 「はい/いいえ」で答えられる選択肢から段階的に広げる構造化ステップを提示しました。</p>
+          </div>
+
+          <!-- レビュー 7 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-comments text-teal-500 mr-1"></i>外国語混在の音声認識
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「ポルトガル語混じりの日本語でも音声認識して、自然な敬語の日本語に直してくれるか？」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> バイリンガル対応のプロンプト構文を採用し、多言語混在テキストの自動校正にも対応させました。</p>
+          </div>
+
+          <!-- レビュー 8 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-clock-rotate-left text-indigo-500 mr-1"></i>不登校・療養期間の前向きな説明
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「学校に行けていなかった期間を面接でどう説明すればいいのか悩んでいた。体調管理に努めたことを前向きに書いてもらえて救われた。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 静養期間を「自己管理能力の育成」として肯定的に位置づけるテンプレートを配備しました。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="day3-wednesday-padlet-dialogue.html" class="text-slate-500 hover:text-slate-800">&larr; 第3弾［学級対話・Padlet］へ戻る</a>
+        <a href="day5-friday-exam-fast-factcheck.html" class="font-bold text-sky-600 hover:underline">
+          第5弾［校務時短＆AI探偵］へ進む &rarr;
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+      <div class="flex justify-center flex-wrap gap-4 text-xs mb-3 text-slate-400">
+        <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="../terms.html" class="hover:text-white transition">規約・法務監査</a>
+      </div>
+      <p>© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyCode(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>コピー完了!</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

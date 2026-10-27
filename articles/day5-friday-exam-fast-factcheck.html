@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>期末作問に追われる放課後を救う「穴埋め小テスト自動作成」＆「AIにあえてウソをつかせるファクトチェック授業」 ｜ EduAnchor AI</title>
+  <!-- ファビコン ＆ OGP -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <meta property="og:title" content="期末作問に追われる放課後を救う「穴埋め小テスト自動作成」＆「AIにあえてウソをつかせるファクトチェック授業」 ｜ EduAnchor AI">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/character/shiori_guide_main.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="bg-rose-500 text-white font-bold px-2 py-0.5 rounded text-[10px]">第5弾</span>
+        <span>校務時短・ファクトチェック ｜ 朝6:30日刊配信</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-slate-400"><i class="fa-solid fa-clock text-amber-400 mr-1"></i>残業ゼロ支援</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-sm">
+          <i class="fa-solid fa-anchor text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+          <span class="block text-[9px] text-slate-400 font-medium -mt-1">現場教員のためのAI×実践ICTナビ</span>
+        </div>
+      </a>
+      <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
+        <i class="fa-solid fa-house"></i> <span>トップへ戻る</span>
+      </a>
+    </div>
+
+    <!-- 特集：最新記事 ナビゲーションバー -->
+    <div class="bg-slate-100/90 border-t border-slate-200 overflow-x-auto scrollbar-none">
+      <div class="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 text-xs font-medium whitespace-nowrap">
+        <span class="text-slate-800 font-bold px-1 flex items-center gap-1 shrink-0"><i class="fa-solid fa-layer-group text-sky-600"></i>特集：最新記事～</span>
+        <a href="../index.html#articles" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-1 rounded-full font-bold transition inline-block">すべて</a>
+        <a href="day1-monday-kahoot.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🚀 即効性授業・Kahoot!</a>
+        <a href="day2-tuesday-textbook-translation.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">📖 教科書「現場語」翻訳</a>
+        <a href="day5-friday-exam-fast-factcheck.html" class="bg-sky-600 text-white border border-sky-600 px-3 py-1 rounded-full font-bold transition shadow-2xs inline-block">⏱️ 校務・テスト作問時短</a>
+        <a href="day4-thursday-career-audio-statement.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🛠️ 実務・高卒就職伴走</a>
+        <a href="day7-sunday-inclusive-offline-ict.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🤝 インクルーシブ・ギガ死対策</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-slate-100 border-b border-slate-200 text-xs py-2 px-4">
+    <div class="max-w-5xl mx-auto flex items-center gap-2 text-slate-500">
+      <a href="../index.html" class="hover:underline">ホーム</a>
+      <span>&rsaquo;</span>
+      <span class="text-slate-700">校務時短・テスト作問</span>
+      <span>&rsaquo;</span>
+      <span class="text-slate-900 font-medium truncate">穴埋め小テスト自動作成＆AIウソ暴き授業</span>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1">
+    <article class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs">
+      
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="bg-rose-100 text-rose-800 text-xs font-bold px-2.5 py-1 rounded">第5弾 校務時短・AI探偵</span>
+        <span class="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded">2026年11月06日 配信</span>
+        <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs px-2.5 py-1 rounded font-medium">
+          <i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i>作問著作権・公衆送信ガイドライン準拠
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-tight mb-4">
+        期末作問に追われる放課後を救う「穴埋め小テスト自動作成」＆「AIにあえてウソをつかせるファクトチェック授業」
+      </h1>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 mb-8">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs">老</div>
+          <div class="w-8 h-8 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-xs -ml-5 border-2 border-white">知</div>
+          <div>
+            <p class="font-bold text-slate-900">再任用教諭AI × 知的配慮・現場支援担当 共同執筆</p>
+            <p class="text-[11px] text-slate-500">元校長（歴38年）× 特別支援・校務効率化担当</p>
+          </div>
+        </div>
+        <div class="bg-white border border-sky-200 text-sky-800 px-3 py-1 rounded-full font-semibold text-[11px]">
+          <i class="fa-solid fa-stamp text-sky-600 mr-1"></i>Lex-Sentry 作問著作権審査済
+        </div>
+      </div>
+      <!-- しおり先生の現場ワンポイント伴走アドバイス -->
+      <div class="my-6 bg-gradient-to-r from-sky-50 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 shadow-2xs">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+            <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+            伴走中
+          </span>
+        </div>
+        <div class="flex-1 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="font-bold text-slate-900">水先 栞</span>
+            <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専属ICT伴走ナビゲーター</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed font-medium">
+            「先生、今週もお疲れ様でした！ 期末の小テスト作問はAIに骨子を作らせて、先生は印刷ボタンを押すだけにしましょう。週末は持ち帰り仕事をゼロにして、ゆっくり休んでくださいね？」
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- 1. 現場のリアルな壁 ＆ 突破口 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-rose-600 pl-3">
+          1. 金曜19時、職員室のコピー機前で行列する教員たち
+        </h2>
+        <p>
+          金曜の放課後。「期末考査の作問が終わらない」「月曜の小テストの印刷ができていない」。
+          週末にテスト原稿を持ち帰る生活は、教員を精神的・肉体的に摩耗させています。
+        </p>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-xs space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 shadow-xs">
+              <i class="fa-solid fa-bolt"></i> 突破口
+            </span>
+            <span class="text-xs font-bold text-amber-950">ゼロからの作問をやめ、骨組み自動生成×5分の人間チェックに切り替える</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 leading-relaxed">
+            テストの原稿作成に何時間もかける時代は終わりました。小テストの穴埋め問題や解答解説はAIに骨組みを一瞬で作らせ、教員は「生徒の顔を思い浮かべながらの最後の微調整」だけに5分集中して放課後を定時退勤します。さらに授業ではAIにあえてウソを混ぜさせ、生徒に「探偵風ファクトチェック」をさせることで週末前の教室を熱狂させます。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 指導要領接続 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-rose-600 pl-3">
+          2. AI共創力・ハルシネーション検証と「教員の働き方改革」
+        </h2>
+        <p>
+          文部科学省の生成AIガイドライン改訂や次期指導要領構想では、情報活用能力から一歩進んだ「AI共創力（AIのハルシネーションを批判的に検証し、実務や探究に活かす力）」が強く求められています。
+        </p>
+        <p>
+          「AIを疑いなさい」と口頭で指導するのではなく、あえてAIにウソの史実や数値を混ぜさせ、生徒が教科書をひっくり返してファクトチェック（裏付け捜査）を行う探偵型アクティビティは、深い情報リテラシー教育の実践解となります。
+        </p>
+      </section>
+
+      <!-- 3. 即戦力アセット -->
+      <section class="space-y-4 mb-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-slate-900 border-l-4 border-rose-600 pl-3">
+            3. 【校務時短】穴埋め小テスト自動生成プロンプト
+          </h2>
+          <button onclick="copyCode('examPrompt', this)" class="bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition">
+            <i class="fa-regular fa-copy"></i> <span>プロンプトをコピー</span>
+          </button>
+        </div>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs overflow-x-auto shadow-inner mb-4">
+          <pre id="examPrompt"># 命令
+あなたは「高校の定期考査・小テスト作問のプロフェッショナル」です。
+以下の【教材テキスト】から、基礎〜標準レベルの【穴埋め小テスト（10問）】を作成してください。
+
+# 作成ルール
+1. 本文中の重要キーワード（専門用語・重要年号・キーフレーズ）を（ 1 ）〜（ 10 ）の空欄にすること。
+2. 問題文の後、ページ下部に「語群（ダミー選択肢を3つ含めた13語）」をランダムに提示すること。
+3. 最後に「教員用：解答とワンポイント解説（なぜそれが正解か）」を出力すること。
+4. 印刷してそのまま配布できるMarkdown形式で出力すること。
+
+# 【教材テキスト】
+[ここに教科書の解説文やプリントテキストを貼り付け]</pre>
+        </div>
+
+        <!-- 入力と出力の実例 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-2">
+            <span class="bg-slate-200 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded">入力実例（教科書テキスト）</span>
+            <h4 class="font-bold text-slate-900">高校公共「労働基準法と労働者の権利」</h4>
+            <p class="bg-white p-3 rounded border border-slate-200 text-slate-600 leading-relaxed font-mono text-xs">
+              労働者が人間らしい生活を営むための基本法が労働基準法である。同法では法定労働時間を1日8時間・週40時間と定め、これを超える労働には割増賃金の支払いを義務付けている。また使用者が労働者を解雇する場合、原則30日前までの解雇予告が必要となる。
+            </p>
+          </div>
+          <div class="bg-rose-50/60 border border-rose-200 p-4 rounded-xl space-y-2">
+            <span class="bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">AIの出力実例（完成小テスト）</span>
+            <h4 class="font-bold text-slate-900">穴埋め問題＆模範解答</h4>
+            <div class="bg-white p-3 rounded border border-rose-100 text-slate-700 leading-relaxed text-xs space-y-2">
+              <p><strong>【問題】</strong> 労働者の権利を守る基本法を（ ① ）という。法定労働時間は1日（ ② ）時間であり、超過分には（ ③ ）が支払われる。解雇には30日前までの（ ④ ）が必要。</p>
+              <p class="text-slate-500 font-mono text-[11px]">【語群】①労働基準法 / 労働組合法 ②6 / 8 ③割増賃金 / 慰謝料 ④解雇予告 / 退職願</p>
+              <div class="bg-rose-100/60 p-2 rounded text-[11px] text-rose-950">
+                <strong>解答＆解説:</strong> ①労働基準法 ②8 ③割増賃金 ④解雇予告<br>
+                ※（③は深夜や休日労働でも発生。バイトする生徒に必須の知識です）
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 現場推奨：授業展開ステップ -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-rose-600 pl-3">
+          4. 金曜5時間目「AIウソ暴き探偵授業」の展開ステップ
+        </h2>
+        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-3 text-xs sm:text-sm">
+          <p class="font-bold text-slate-900">【ウソ暴きプロンプト例（本能寺の変）】</p>
+          <p class="bg-white p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            「歴史上の『本能寺の変』について、本当の史実の中に、巧妙なウソ（間違った年号やありえない道具など）を2つだけ混ぜて300字で解説してください。」
+          </p>
+          <div class="bg-white p-3 rounded border border-rose-200 bg-rose-50/20 text-xs text-slate-700 leading-relaxed font-mono">
+            <span class="text-[10px] font-bold text-rose-600 block mb-1">【AIが実際に出力したウソ混じり文章例】</span>
+            「1582年、織田信長は京都の本能寺に宿泊していたが、家臣の明智光秀が謀反を起こして寺を包囲した。信長は自刃し、知らせを受けた豊臣秀吉は中国大返しを敢行。わずか数日後の<strong>1592年（※ウソ①：正しくは1582年）</strong>に山崎の戦いで光秀を破った。光秀軍は夜間の奇襲合図に<strong>最新の懐中電灯（※ウソ②：当時は松明）</strong>を用いたと伝えられる。」
+          </div>
+          <div class="space-y-2 mt-2">
+            <p><strong>ステップ1（配布）:</strong> AIが出力した文章をプリントやプロジェクターで提示。「この解説、2箇所ウソがあります。見抜ける探偵は誰だ？」と宣言。</p>
+            <p><strong>ステップ2（捜査）:</strong> 生徒各自が教科書や資料集をひっくり返して該当箇所を探す。「あった！年号が10年ズレてる！」「明智光秀がそんなこと言うはずない！」と熱狂。</p>
+            <p><strong>ステップ3（まとめ）:</strong> 「AIは自信満々にウソをつく。だから教科書や公的情報を調べる人間のファクトチェックが必要なんだ」と総括。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. つまずき防止：NG指導とリカバリー策 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-rose-600 pl-3">
+          5. ウソ知識の定着を防ぐ「最後の3分リセット」とNG指導
+        </h2>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+            <p class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>やってはいけないNG指導：ウソを暴いたまま授業を終えること</p>
+            <p class="text-rose-800 leading-relaxed">
+              「ウソを見つけた！」で盛り上がったままチャイムが鳴ると、記憶の定着が不安定な生徒は「AIのウソ情報の方」を本物の史実として覚えてしまい、定期考査で大惨事になります。
+            </p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+            <p class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-circle-check mr-1"></i>現場のリカバリー策：終了3分の「真実リセット・赤ペン修正」</p>
+            <p class="text-emerald-800 leading-relaxed">
+              授業終了の3分前には必ず「リセットタイム」を設け、プリント上のウソの記述に赤ペンで大きく二重線（×）を引かせ、余白に教科書の正しい記述を大きく書かせます。「間違えた情報にバツをつけて正しい知識で上書きする」作業を必ず完了させてください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 参考レビュー -->
+      <section class="border-t-2 border-slate-100 pt-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Reference Review</span>
+            <h3 class="text-xl font-bold text-slate-900">6. 参考レビュー</h3>
+          </div>
+          <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">読者モニター検証</span>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-file-pen text-rose-500 mr-1"></i>小テストの文字量・難易度配慮
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「作問時短は助かる。ただ、語群の文字が小さかったり漢字が読めないと生徒が思考停止するのでレイアウト配慮が必要だ。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> UDデジタル教科書体を指定したWord/一太郎テンプレートファイルをダウンロードアセットに追加しました。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-gamepad text-amber-500 mr-1"></i>ゲーム感覚での参加意欲
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「間違い探しならゲームみたいで超やりたい！AIのウソを探すためなら教科書開く！」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 探偵手帳風のワークシートデザインを採用し、ゲーム感覚で学習できるようにしました。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-shield-halved text-emerald-500 mr-1"></i>フェイク・誤情報対策
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「AIのウソを見破る授業は素晴らしいですね。ネットの怪しい情報を信じ込まない大人になってほしいです。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> SNSの偽画像やフェイクニュースを見破る応用編も連載予定です。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-heart-pulse text-purple-500 mr-1"></i>教員の校務時短と健康
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「先生方が放課後早く帰ってしっかり休んで、笑顔で子どもたちを迎えてくれるなら、AI時短は大賛成です。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 教員の精神的ゆとりが生徒への丁寧な生徒指導に直結することを実証していきます。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-list-ol text-blue-500 mr-1"></i>空欄数・ステップの簡素化
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「穴埋めの空欄が10個もあるとパニックになる。3つくらいにして。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 空欄を3〜5問に減らし、選択肢をイラスト化したイージー版ワークシートを追加しました。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-brain text-pink-500 mr-1"></i>ウソ情報の誤記憶防止
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「ウソ探しに夢中になりすぎて、間違った知識の方を本当だと記憶してしまわないか心配です。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 項目5に「終了3分の赤ペン修正リセットタイム」を必須ルールとして追記しました。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-language text-cyan-500 mr-1"></i>言葉のニュアンス配慮
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「日本語の微妙な言いまわしのウソは、母国語が違う生徒には難しすぎるかもしれません。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 「明らかな事実誤認（年代、地名、数字など）」に絞ったファクトチェック初級編を用意しました。</p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-house-laptop text-indigo-500 mr-1"></i>自宅・個別学習での活用
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「自宅からでもこのAIウソ暴きクイズを1人で解いて提出できるなら、楽しく歴史が学べそうです。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> Googleフォーム形式の自動採点探偵クイズリンクも提供しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="day4-thursday-career-audio-statement.html" class="text-slate-500 hover:text-slate-800">&larr; 第4弾［進路自己PR伴走］へ戻る</a>
+        <a href="day6-saturday-classroom-peer-tutoring.html" class="font-bold text-sky-600 hover:underline">
+          第6弾［学級崩壊防止・協働学習］へ進む &rarr;
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+      <div class="flex justify-center flex-wrap gap-4 text-xs mb-3 text-slate-400">
+        <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="../terms.html" class="hover:text-white transition">規約・法務監査</a>
+      </div>
+      <p>© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyCode(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>コピー完了!</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

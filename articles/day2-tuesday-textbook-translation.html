@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「この言葉、中2にわかるように言って？」難解な教科書用語を“現場語”に即時変換する対話プロンプト ｜ EduAnchor AI</title>
+  <!-- ファビコン ＆ OGP -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <meta property="og:title" content="「この言葉、中2にわかるように言って？」難解な教科書用語を“現場語”に即時変換する対話プロンプト ｜ EduAnchor AI">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/character/shiori_guide_main.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="bg-emerald-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第2弾</span>
+        <span>教材研究時短・現場語翻訳 ｜ 朝6:30日刊配信</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-slate-400"><i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-sm">
+          <i class="fa-solid fa-anchor text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+          <span class="block text-[9px] text-slate-400 font-medium -mt-1">現場教員のためのAI×実践ICTナビ</span>
+        </div>
+      </a>
+      <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
+        <i class="fa-solid fa-house"></i> <span>トップへ戻る</span>
+      </a>
+    </div>
+
+    <!-- 特集：最新記事 ナビゲーションバー -->
+    <div class="bg-slate-100/90 border-t border-slate-200 overflow-x-auto scrollbar-none">
+      <div class="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 text-xs font-medium whitespace-nowrap">
+        <span class="text-slate-800 font-bold px-1 flex items-center gap-1 shrink-0"><i class="fa-solid fa-layer-group text-sky-600"></i>特集：最新記事～</span>
+        <a href="../index.html#articles" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-1 rounded-full font-bold transition inline-block">すべて</a>
+        <a href="day1-monday-kahoot.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🚀 即効性授業・Kahoot!</a>
+        <a href="day2-tuesday-textbook-translation.html" class="bg-sky-600 text-white border border-sky-600 px-3 py-1 rounded-full font-bold transition shadow-2xs inline-block">📖 教科書「現場語」翻訳</a>
+        <a href="day5-friday-exam-fast-factcheck.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">⏱️ 校務・テスト作問時短</a>
+        <a href="day4-thursday-career-audio-statement.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🛠️ 実務・高卒就職伴走</a>
+        <a href="day7-sunday-inclusive-offline-ict.html" class="bg-white hover:bg-sky-50 hover:text-sky-700 text-slate-700 border border-slate-200 px-3 py-1 rounded-full transition shadow-2xs inline-block">🤝 インクルーシブ・ギガ死対策</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-slate-100 border-b border-slate-200 text-xs py-2 px-4">
+    <div class="max-w-5xl mx-auto flex items-center gap-2 text-slate-500">
+      <a href="../index.html" class="hover:underline">ホーム</a>
+      <span>&rsaquo;</span>
+      <span class="text-slate-700">教科書「現場語」翻訳</span>
+      <span>&rsaquo;</span>
+      <span class="text-slate-900 font-medium truncate">難解な教科書用語を即時変換するプロンプト</span>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1">
+    <article class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs">
+      
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded">第2弾 現場語翻訳</span>
+        <span class="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded">2026年11月03日 配信</span>
+        <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs px-2.5 py-1 rounded font-medium">
+          <i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i>普通科・実務科 現場検証済
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-tight mb-4">
+        「この言葉、中2にわかるように言って？」難解な教科書用語を“現場語”に即時変換する対話プロンプト
+      </h1>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 mb-8">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-sky-700 text-white flex items-center justify-center font-bold text-xs">普</div>
+          <div class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold text-xs -ml-5 border-2 border-white">技</div>
+          <div>
+            <p class="font-bold text-slate-900">一般普通科教員AI × 実務・技術科教員AI 共同執筆</p>
+            <p class="text-[11px] text-slate-500">教務主任（教歴14年）× 工業主任（教歴22年）</p>
+          </div>
+        </div>
+        <div class="bg-white border border-sky-200 text-sky-800 px-3 py-1 rounded-full font-semibold text-[11px]">
+          <i class="fa-solid fa-stamp text-sky-600 mr-1"></i>Lex-Sentry 引用著作権審査済
+        </div>
+      </div>
+      <!-- しおり先生の現場ワンポイント伴走アドバイス -->
+      <div class="my-6 bg-gradient-to-r from-sky-50 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 sm:gap-4 shadow-2xs">
+        <div class="relative shrink-0">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+            <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+            伴走中
+          </span>
+        </div>
+        <div class="flex-1 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="font-bold text-slate-900">水先 栞</span>
+            <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専属ICT伴走ナビゲーター</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed font-medium">
+            「難解な教科書用語って、大人でも眠くなりますよね。この対話プロンプトに教科書の1文をコピペするだけで、身近なコンビニやスマホの例えに一瞬で言い換えてくれますよ！」
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- 1. 現場のリアルな壁 ＆ 突破口 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-3">
+          1. 生徒が寝るのは「日本語が外国語に聞こえるから」
+        </h2>
+        <p>
+          高校2学期の教科書を開いてみてください。「主客合一」「蓋然性」「触媒作用」「比較優位」……。
+          大人や進学校の生徒にとっては自明な用語でも、読書習慣の乏しい生徒にとって、これらは「呪文」や「外国語」と同じです。
+        </p>
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-xs space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 shadow-xs">
+              <i class="fa-solid fa-bolt"></i> 突破口
+            </span>
+            <span class="text-xs font-bold text-amber-950">定義を暗記させる前に、日常の身体感覚へ引きずり下ろす</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 leading-relaxed">
+            板書に難解な学術的定義を書いた瞬間、生徒の思考はシャットダウンします。教科書の解説文をそのままAIに投げ、「中2でもわかるコンビニや部活のたとえ話」に1秒変換。まず「要するに日常で言うとこういうこと」と身体感覚で納得させてから正式用語に戻すのが、全員を脱落させない授業づくりの出口です。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 指導要領接続 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-3">
+          2. 知識・技能の習得と「日常の文脈化（認知心理アプローチ）」
+        </h2>
+        <p>
+          学習指導要領における「知識・技能」の習得は、単なる用語の丸暗記ではなく、「生きて働く知識」としての概念理解が求められています。
+          認知心理学において、新しい抽象概念は既存のスキーマ（既有体験）と結びついた時に初めて長期記憶へと定着します。
+        </p>
+        <p>
+          高校生の生活世界にある「コンビニのレジ打ち」「ファストフードのセット注文」「ゲームのパーティ編成」という身近なスキーマに教科書の抽象概念をマッピングすることで、学力に自信のない生徒でも主体的・探究的な問い直しが可能になります。
+        </p>
+      </section>
+
+      <!-- 3. 即戦力アセット -->
+      <section class="space-y-4 mb-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-3">
+            3. コピペで使える「教科書・現場語翻訳プロンプト」
+          </h2>
+          <button onclick="copyCode('promptCode', this)" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-xs transition">
+            <i class="fa-regular fa-copy"></i> <span>プロンプトをコピー</span>
+          </button>
+        </div>
+        <p class="text-xs text-slate-500">
+          ChatGPTやClaudeにそのまま貼り付けて、[ ] の部分に教科書の解説文を入れてください。
+        </p>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs overflow-x-auto shadow-inner mb-4">
+          <pre id="promptCode"># 命令
+あなたは「公立高校の生徒を絶対に寝かせない名物教員」です。
+以下の【対象用語/教科書の解説】を、中学2年生が日常で体験する身近な具体例（コンビニ、スマホ、部活、ゲーム、バイト、料理、バイクなど）を使った「現場語」に翻訳してください。
+
+# 制約条件
+1. 難解な学術用語や二字熟語は一切使わず、話し言葉で平易に説明すること。
+2. 「公式な定義」⇒「要するに日常で言うと？」⇒「絶対にやってはいけない勘違い」の3段構成にすること。
+3. 生徒がクスッと笑えるようなユーモアや共感を1つ交えること。
+4. 出力は200字〜300字程度にコンパクトにまとめること。
+
+# 【対象用語/教科書の解説】
+[ここに教科書の記述や難解な用語を貼り付け]</pre>
+        </div>
+
+        <!-- 出力実例 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-2">
+            <span class="bg-slate-200 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded">実例① 「触媒（理科・化学）」</span>
+            <div class="bg-white p-2.5 rounded border border-slate-200 text-slate-500 font-mono text-[11px]">
+              <strong>入力（教科書記述）:</strong> 「触媒とは、化学反応の前後でそれ自身は変化しないが、反応速度を著しく変化させる物質のことである。」
+            </div>
+            <div class="bg-emerald-50/70 p-3 rounded border border-emerald-200 text-slate-800 leading-relaxed text-xs">
+              <strong>AI出力（現場語訳）:</strong><br>
+              「要するに、<strong>友達同士の仲直りをセッティングするけど、自分は付き合わないおせっかいなキューピッド役</strong>だ！
+              A君とB君が仲直りするのに3日かかる。そこにC君が『まあまあ、マック行こうぜ』と間に入ることで10分で仲直りさせる。でもC君自身は何も損しない。これが触媒だ！」
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-2">
+            <span class="bg-slate-200 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded">実例② 「比較優位（社会・政経）」</span>
+            <div class="bg-white p-2.5 rounded border border-slate-200 text-slate-500 font-mono text-[11px]">
+              <strong>入力（教科書記述）:</strong> 「一国が他国と比較して相対的に生産性の高い財の生産に特化し貿易を行うことで、双方が最大の利益を得る。」
+            </div>
+            <div class="bg-emerald-50/70 p-3 rounded border border-emerald-200 text-slate-800 leading-relaxed text-xs">
+              <strong>AI出力（現場語訳）:</strong><br>
+              「文化祭で例えるぞ。A君は『たこ焼き』も『看板作り』も一番上手い。B君は看板作りは並、たこ焼きは焦がす。
+              じゃあA君が全部やるか？違う！A君は一番価値が高いたこ焼きに集中し、看板はB君に任せる。<strong>一番得意なことに集中して分担した方がクラス全体の売上が最大になる</strong>！」
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 現場推奨：活用3ステップ -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-3">
+          4. 授業での活用3ステップ（導入1分たとえ話⇒比較⇒正式用語）
+        </h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm">
+          <div class="flex items-start gap-3">
+            <span class="bg-emerald-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 1</span>
+            <p><strong>【掴みのたとえ話（1分）】</strong>: 「今日のテーマは『キューピッド』です」と口頭で日常たとえ話を紹介。「あるある！」と笑わせる。</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="bg-emerald-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 2</span>
+            <p><strong>【教科書の記述と対照（2分）】</strong>: 「じゃあ教科書のこの堅苦しい文章を見てごらん。さっきのキューピッド、どれに当たる？」と生徒に探させる。</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="bg-emerald-600 text-white font-bold px-2 py-0.5 rounded text-xs shrink-0">Step 3</span>
+            <p><strong>【正式用語をノートに記録（2分）】</strong>: 「テストでは『キューピッド』と書いたらバツだぞ。『触媒』と3回書いて囲んでおこう」と正式用語に確実に戻す。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. つまずき防止：NG指導とリカバリー策 -->
+      <section class="space-y-4 mb-8 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 border-l-4 border-emerald-600 pl-3">
+          5. たとえ話だけで終わらせない「定期考査得点化」リカバリー策
+        </h2>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl">
+            <p class="font-bold text-rose-900 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>やってはいけないNG指導：たとえ話だけで授業を終えること</p>
+            <p class="text-rose-800 leading-relaxed">
+              「先生のたとえ話めっちゃ面白かった！」で授業を終えると、定期考査や入社試験の記述問題で「マックのキューピッド」と解答用紙に書いて0点を取る生徒が続出します。
+            </p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+            <p class="font-bold text-emerald-900 mb-1"><i class="fa-solid fa-circle-check mr-1"></i>現場のリカバリー策：過去問フレーズへの「逆翻訳ドリル」</p>
+            <p class="text-emerald-800 leading-relaxed">
+              授業の終わり5分で、「では実際の過去問でどう出題されるか？」として、選択問題（「下線部『触媒』の働きとして正しい記述を選べ」）を1問だけ解かせます。「たとえ話で直感理解」⇒「入試・考査フレーズで定着」の往復運動をルーティン化してください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 参考レビュー -->
+      <section class="border-t-2 border-slate-100 pt-8">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Reference Review</span>
+            <h3 class="text-xl font-bold text-slate-900">6. 参考レビュー</h3>
+          </div>
+          <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium">読者モニター検証</span>
+        </div>
+
+        <div class="space-y-3 text-xs">
+          <!-- レビュー 1 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-pen-to-square text-rose-500 mr-1"></i>定期テストでの答案への反映
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「たとえ話は盛り上がるが、テストで『キューピッド』と書く生徒が出る。本番の学術用語への引き戻しステップが不可欠。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 項目5に「テスト得点化リカバリー策」として、過去問フレーズへの逆翻訳手順を義務付けました。</p>
+          </div>
+
+          <!-- レビュー 2 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-bolt text-amber-500 mr-1"></i>理解のスピードと親しみやすさ
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「キューピッドのたとえ、めっちゃわかりやすい。これなら教科書投げ出さずに読める！」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 生徒が日常で触れるアルバイトやスマートフォンの最新事例もプロンプトに拡充しました。</p>
+          </div>
+
+          <!-- レビュー 3 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-graduation-cap text-emerald-500 mr-1"></i>大学入試・一般常識試験への通用
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「面白いのはいいですが、大学入試や就職の一般常識試験で通用する知識として定着するのか不安。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 単なる雑談で終わらせず、共通テストや採用試験の過去問フレーズへの接続問題をセットで提供します。</p>
+          </div>
+
+          <!-- レビュー 4 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-house-chimney text-purple-500 mr-1"></i>家庭での声かけ・勉強サポート
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「家で子どもに勉強を聞かれたとき、親でも理解できる言葉で説明してくれるのは本当に助かる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 保護者会や三者面談で配布できる「おうちで使えるたとえ話ミニ解説プリント」の雛形も公開予定です。</p>
+          </div>
+
+          <!-- レビュー 5 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-image text-blue-500 mr-1"></i>視覚的な図解・イラストの必要性
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「文字だけでなく、A君・B君・C君の簡単なイラスト（図解）があると、もっと迷わずに理解できる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> Canva等で3分で作れる棒人間イラストの図解テンプレートをダウンロードアセットに追加しました。</p>
+          </div>
+
+          <!-- レビュー 6 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-arrows-turn-to-dots text-pink-500 mr-1"></i>雑談への過剰脱線防止
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「たとえ話が面白すぎて、マックのポテトの話に脱線して授業に戻ってこれなくなる心配がある。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 「たとえ話は1分で切り上げ、即座に手元の穴埋めワークに戻す」タイムキーパールールを明記しました。</p>
+          </div>
+
+          <!-- レビュー 7 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-earth-americas text-teal-500 mr-1"></i>文化的文脈・国際的な日常例
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「『キューピッド』や『模擬店』という日本特有・文化的な文脈がわからない生徒もいる。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> サッカーのパス回しなど、万国共通のスポーツや日常行動を使ったたとえ話バリエーションを盛り込みました。</p>
+          </div>
+
+          <!-- レビュー 8 -->
+          <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-800 bg-white border border-slate-200 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <i class="fa-solid fa-book-open text-indigo-500 mr-1"></i>個別自習・自宅学習での利用
+              </span>
+            </div>
+            <p class="text-slate-600 mb-2">「1人で教科書を読んでいて頭が痛くなるとき、このプロンプトに教科書を入れてマイペースに自習したい。」</p>
+            <p class="text-sky-700 bg-sky-50 p-2 rounded text-[11px] font-medium"><strong>⇒ 対応策:</strong> 自宅自習用のワンクリックWebプロンプトリンクを整備し、生徒個人の自習端末でも使えるようにしました。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-10 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="day1-monday-kahoot.html" class="text-slate-500 hover:text-slate-800">&larr; 第1弾［即効性授業・Kahoot!］へ戻る</a>
+        <a href="day3-wednesday-padlet-dialogue.html" class="font-bold text-sky-600 hover:underline">
+          第3弾［学級対話・Padlet］へ進む &rarr;
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+      <div class="flex justify-center flex-wrap gap-4 text-xs mb-3 text-slate-400">
+        <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="../terms.html" class="hover:text-white transition">規約・法務監査</a>
+      </div>
+      <p>© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyCode(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>コピー完了!</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

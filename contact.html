@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ ｜ EduAnchor AI（エデュアンカー）</title>
+  <meta name="description" content="EduAnchor AI へのお問い合わせ窓口。教材の不具合報告、実践事例のご提供、学校・自治体での導入相談受付。">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- トップ告知バー -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">朝6:30日刊配信</span>
+        <span>現場教員のための「AI×実践ICT」総合実践ナビ</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="terms.html" class="hover:text-white transition text-slate-400">
+          <i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- ロゴ -->
+        <a href="index.html" class="flex items-center gap-2 group shrink-0">
+          <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-md group-hover:bg-slate-800 transition">
+            <i class="fa-solid fa-anchor text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xl font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+            <span class="block text-[10px] text-slate-500 font-medium -mt-1 tracking-wider">現場教員のためのAI×実践ICTナビ</span>
+          </div>
+        </a>
+
+        <!-- グローバルナビゲーション -->
+        <nav class="flex items-center gap-1 sm:gap-3 md:gap-6 text-xs sm:text-sm font-bold text-slate-600 overflow-x-auto scrollbar-none py-1">
+          <a href="about.html" class="hover:text-sky-600 transition whitespace-nowrap px-2 py-1 rounded-md hover:bg-slate-50">当サイトについて</a>
+          <a href="articles.html" class="hover:text-sky-600 transition whitespace-nowrap px-2 py-1 rounded-md hover:bg-slate-50">実践記事一覧</a>
+          <a href="team.html" class="hover:text-sky-600 transition whitespace-nowrap px-2 py-1 rounded-md hover:bg-slate-50">執筆陣・体制</a>
+          <a href="contact.html" class="text-sky-600 border-b-2 border-sky-600 whitespace-nowrap px-2 py-1">お問い合わせ</a>
+          <a href="terms.html" class="hover:text-sky-600 transition whitespace-nowrap px-2 py-1 rounded-md hover:bg-slate-50">規約</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーロータイトル -->
+  <section class="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center space-y-3">
+      <span class="inline-block bg-sky-500/20 text-sky-300 border border-sky-400/30 text-xs px-3 py-1 rounded-full font-bold">
+        CONTACT US
+      </span>
+      <h1 class="text-2xl sm:text-4xl font-black tracking-tight">
+        お問い合わせ・ご意見・実践報告
+      </h1>
+      <p class="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+        教材の不具合報告、現場での実践事例のご共有、学校・教育委員会での導入や研修のご相談など、お気軽にお寄せください。
+      </p>
+    </div>
+  </section>
+
+  <!-- メインコンテンツ -->
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-10">
+
+    <!-- 送信完了メッセージ（初期非表示） -->
+    <div id="success-box" class="hidden bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-2xl p-6 text-center space-y-3 shadow-sm">
+      <div class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow-xs">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-lg font-bold">お問い合わせを受け付けました</h3>
+      <p class="text-xs sm:text-sm text-emerald-800 leading-relaxed">
+        メッセージをお送りいただきありがとうございます。<br>
+        EduAnchor AI 編集委員会または担当AIエージェントより、原則2営業日以内にご返信いたします。
+      </p>
+      <button onclick="resetContactForm()" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg transition shadow-xs">
+        別のお問い合わせを送信する
+      </button>
+    </div>
+
+    <!-- お問い合わせフォーム -->
+    <form id="contact-form" onsubmit="submitContact(event)" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
+      
+      <div class="space-y-1">
+        <label for="name" class="block text-xs font-bold text-slate-700">お名前・ペンネーム <span class="text-rose-500">*</span></label>
+        <input type="text" id="name" required placeholder="例: 山田 太郎（情報科教諭）" class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition">
+      </div>
+
+      <div class="space-y-1">
+        <label for="email" class="block text-xs font-bold text-slate-700">メールアドレス <span class="text-rose-500">*</span></label>
+        <input type="email" id="email" required placeholder="例: teacher@school.ed.jp" class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition">
+      </div>
+
+      <div class="space-y-1">
+        <label for="category" class="block text-xs font-bold text-slate-700">お問い合わせ種別 <span class="text-rose-500">*</span></label>
+        <select id="category" required class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition">
+          <option value="">選択してください</option>
+          <option value="practice">教材の実践報告・使ってみた感想</option>
+          <option value="request">教材のリクエスト・作ってほしいテーマ</option>
+          <option value="bug">CSVやプロンプトの不具合・誤字報告</option>
+          <option value="lecture">校内研修・自治体での導入相談・取材</option>
+          <option value="other">その他のお問い合わせ</option>
+        </select>
+      </div>
+
+      <div class="space-y-1">
+        <label for="message" class="block text-xs font-bold text-slate-700">お問い合わせ内容 <span class="text-rose-500">*</span></label>
+        <textarea id="message" rows="5" required placeholder="ご意見、教室での反応、ご要望などを具体的にご記入ください。" class="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition"></textarea>
+      </div>
+
+      <div class="pt-2">
+        <button type="submit" class="w-full py-3 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs sm:text-sm rounded-lg transition shadow-md flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>お問い合わせを送信する</span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- よくある質問（FAQ） -->
+    <div class="space-y-4">
+      <h3 class="text-base font-bold text-slate-900 border-l-4 border-sky-600 pl-3">
+        よくあるご質問（FAQ）
+      </h3>
+
+      <div class="space-y-3 text-xs sm:text-sm">
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 mb-1">Q. サイト内の教材やCSVデータは自分の学校で改変して配っても大丈夫ですか？</h4>
+          <p class="text-slate-600 leading-relaxed">
+            A. はい、著作権法第35条の範囲内（授業・教育利用）であれば、ご自身の学級や校内向けに自由に改変・追加・印刷・配信していただけます。クレジット表記も不要です。
+          </p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 mb-1">Q. 校内研修の資料として記事やプロンプトを引用できますか？</h4>
+          <p class="text-slate-600 leading-relaxed">
+            A. もちろん可能です。ぜひ職員室の校内研修や情報教育推進の資料としてご活用ください。
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <div class="flex justify-center flex-wrap gap-4 text-xs">
+        <a href="about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="terms.html" class="hover:text-white transition">規約・法務監査</a>
+      </div>
+      <p class="text-[11px] text-slate-500">© 2026 EduAnchor AI 記事作成委員会 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitContact(e) {
+      e.preventDefault();
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('success-box').classList.remove('hidden');
+    }
+    function resetContactForm() {
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-form').classList.remove('hidden');
+      document.getElementById('success-box').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
