@@ -176,7 +176,30 @@
 
   <!-- 4. カテゴリ絞り込みセレクター（トップバナー直下・横スライド完全撤廃・整然としたフレックス配置） -->
   <section class="bg-white border-b border-slate-200 py-3.5 px-4 sm:px-6 shadow-2xs relative z-30">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+    <div class="max-w-6xl mx-auto flex flex-col
+
+      <!-- 週間パッケージ切り替えタブ -->
+      <div class="w-full flex items-center justify-between border-b border-slate-200 pb-3 mb-1 flex-wrap gap-2">
+        <div class="flex items-center gap-1.5 text-xs font-black text-slate-800">
+          <i class="fa-solid fa-calendar-week text-sky-600"></i>
+          <span>週間パッケージ</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <button onclick="filterWeek('all')" class="week-filter-btn active bg-slate-900 text-white font-bold text-xs px-3 py-1 rounded-lg transition shadow-xs">
+            全期間（全21記事）
+          </button>
+          <button onclick="filterWeek('week1')" class="week-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-1 rounded-lg transition border border-slate-200">
+            第1週（Day 1〜7）
+          </button>
+          <button onclick="filterWeek('week2')" class="week-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-1 rounded-lg transition border border-slate-200">
+            第2週（Day 8〜14）
+          </button>
+          <button onclick="filterWeek('week3')" class="week-filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-1 rounded-lg transition border border-slate-200">
+            第3週（Day 15〜21）
+          </button>
+        </div>
+      </div>
+ md:flex-row items-center justify-between gap-3">
       
       <!-- ラベル -->
       <div class="flex items-center gap-2 text-xs font-black text-slate-800 shrink-0">
@@ -238,15 +261,14 @@
       <h3 class="text-base font-bold text-slate-800 mb-1">該当する教材・記事が見つかりませんでした</h3>
       <p class="text-xs text-slate-500 max-w-sm mx-auto mb-4">別のキーワード（例: Kahoot、作問、進路、翻訳、ギガ死）で検索するか、絞り込みを解除してください。</p>
       <button onclick="resetFilters()" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-lg transition shadow-xs">
-        全7記事を表示する
+        全21記事を表示する
       </button>
     </div>
 
     <!-- 記事グリッド (BizHack添付画像風 リッチカード) -->
     <div id="articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Day 1: 即効性授業・Kahoot! -->
-      <article data-category="kahoot" data-keywords="Kahoot カフート 即効性 小テスト クイズ スマホ 50問 CSV 若手 普通科" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 1: 即効性授業・ICT -->
+      <article data-week="week1" data-category="kahoot" data-keywords="Kahoot カフート 即効性 小テスト クイズ スマホ 50問 CSV 若手 普通科 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-sky-500 via-sky-600 to-anchor-700 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -282,7 +304,7 @@
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
               <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
               <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">コピペOK</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">実務検証済み</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">実務検証済</span>
             </div>
             <a href="articles/day1-monday-kahoot.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-sky-600 flex items-center justify-center gap-1.5">
               <span>第1弾（Kahoot! 50問CSV）を今すぐ読む</span>
@@ -292,8 +314,8 @@
         </div>
       </article>
 
-      <!-- Day 2: 現場語翻訳 -->
-      <article data-category="translation" data-keywords="現場語翻訳 教科書 用語 わかりやすい 言い換え プロンプト 蓋然性 触媒 普通科 実務科" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 2: 現場語翻訳・対話 -->
+      <article data-week="week1" data-category="translation" data-keywords="現場語翻訳 教科書 用語 わかりやすい 言い換え プロンプト 蓋然性 触媒 普通科 実務科 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-emerald-500 via-teal-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -305,7 +327,7 @@
             <span class="bg-slate-900/60 backdrop-blur-xs text-emerald-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">1分変換</span>
           </div>
           <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
-            教科書「現場語」翻訳
+            教科書「現場語」翻訳プロンプト
           </h4>
           <div class="relative z-10 flex justify-end">
             <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
@@ -322,14 +344,14 @@
               </a>
             </h3>
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
-              「蓋然性」「触媒」などの呪文を、コンビニや部活の日常たとえ話に1秒変換。寝る生徒を教室に引き戻す対話AI術。
+              「蓋然性」「主客合一」「触媒」などの難語で寝る生徒を救出。日常の身近なたとえ話へ1秒変換し、教室に引き戻す。
             </p>
           </div>
           <div class="space-y-3.5 pt-1">
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
               <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 1分</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">対話AI</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">全教科対応</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">対話型AI</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">日常たとえ</span>
             </div>
             <a href="articles/day2-tuesday-textbook-translation.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-emerald-600 flex items-center justify-center gap-1.5">
               <span>第2弾（現場語翻訳プロンプト）を今すぐ読む</span>
@@ -339,8 +361,8 @@
         </div>
       </article>
 
-      <!-- Day 3: 学級対話・Padlet -->
-      <article data-category="dialogue" data-keywords="Padlet パドレット 学級対話 匿名付箋 意見集約 炎上防止 再任用教諭AI" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 3: 学級対話・意見集約 -->
+      <article data-week="week1" data-category="dialogue" data-keywords="Padlet パドレット 学級対話 匿名付箋 意見集約 炎上防止 再任用教諭AI 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-indigo-500 via-purple-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -352,7 +374,7 @@
             <span class="bg-slate-900/60 backdrop-blur-xs text-purple-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">炎上防止</span>
           </div>
           <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
-            Padlet 匿名学級対話
+            Padlet匿名付箋×AI意見集約
           </h4>
           <div class="relative z-10 flex justify-end">
             <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
@@ -369,37 +391,37 @@
               </a>
             </h3>
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
-              声の大きい生徒の独壇場を解体。匿名で本音を吐き出させ、AIが交通整理して誰も傷つかない対話を創出。
+              声の大きい生徒の独壇場を解体。匿名で本音を吐き出させ、AIが交通整理して誰も傷つかない対話の場を創出。
             </p>
           </div>
           <div class="space-y-3.5 pt-1">
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">炎上防止済</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 5分</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">本音抽出</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">匿名OK</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">炎上ガード</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">3大論点集約</span>
             </div>
             <a href="articles/day3-wednesday-padlet-dialogue.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-purple-600 flex items-center justify-center gap-1.5">
-              <span>第3弾（Padlet学級対話）を今すぐ読む</span>
+              <span>第3弾（学級対話Padlet術）を今すぐ読む</span>
               <i class="fa-solid fa-arrow-right text-[11px]"></i>
             </a>
           </div>
         </div>
       </article>
 
-      <!-- Day 4: 就職・進路・音声PR -->
-      <article data-category="career" data-keywords="就職 進路 志望動機 自己PR 音声入力 高卒 面接 実務科 困窮配慮" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 4: 就職指導・自己PR -->
+      <article data-week="week1" data-category="career" data-keywords="就職 進路 志望動機 自己PR 音声入力 高卒 面接 実務科 困窮配慮 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-amber-500 via-orange-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
           <div class="relative z-10 flex justify-between items-center gap-2">
             <div class="flex items-center gap-1.5 flex-wrap">
               <span class="bg-amber-500 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第4弾</span>
-              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">実務・高卒就職伴走</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">就職指導・自己PR</span>
             </div>
-            <span class="bg-slate-900/60 backdrop-blur-xs text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">音声入力</span>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">音声入力対応</span>
           </div>
           <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
-            高卒就職 音声自己PR
+            音声入力3問 志望動機生成シート
           </h4>
           <div class="relative z-10 flex justify-end">
             <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
@@ -416,17 +438,17 @@
               </a>
             </h3>
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
-              原稿用紙を前に固まる生徒を救う。日常の地味なバイトや通学経験を、企業の現場で刺さる「誠実な段取り力」へ昇華。
+              原稿用紙を前に固まる生徒を救う。バイトや通学経験を、企業の現場で刺さる「誠実な段取り力」へ音声入力で再構成。
             </p>
           </div>
           <div class="space-y-3.5 pt-1">
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">音声入力対応</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">15分完成</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">実務科特化</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">音声入力</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">質問3つ</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">就職面接直結</span>
             </div>
             <a href="articles/day4-thursday-career-audio-statement.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-amber-600 flex items-center justify-center gap-1.5">
-              <span>第4弾（就職音声PRシート）を今すぐ読む</span>
+              <span>第4弾（志望理由・音声伴走）を今すぐ読む</span>
               <i class="fa-solid fa-arrow-right text-[11px]"></i>
             </a>
           </div>
@@ -434,7 +456,7 @@
       </article>
 
       <!-- Day 5: 校務時短・AI探偵 -->
-      <article data-category="exam" data-keywords="校務時短 作問 テスト 期末 穴埋め ファクトチェック ウソ ハルシネーション 残業ゼロ 再任用" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <article data-week="week1" data-category="exam" data-keywords="期末考査 テスト 作問 時短 小テスト ファクトチェック ハルシネーション AI探偵 校務 校務負担 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-rose-500 via-red-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -446,7 +468,7 @@
             <span class="bg-slate-900/60 backdrop-blur-xs text-rose-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">残業ゼロ</span>
           </div>
           <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
-            期末作問 ＆ AI探偵
+            期末作問時短＆AIファクトチェック
           </h4>
           <div class="relative z-10 flex justify-end">
             <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
@@ -463,25 +485,25 @@
               </a>
             </h3>
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
-              週末持ち帰り残業をゼロにする作問時短ハックと、AIのハルシネーションを逆手に取った熱中ファクトチェック。
+              週末持ち帰り残業をゼロにする作問時短ハックと、AIのハルシネーションを逆手に取った「探偵風ファクトチェック」指導案。
             </p>
           </div>
           <div class="space-y-3.5 pt-1">
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">残業ゼロ</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">穴埋め生成</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">探究対応</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">作問2時間短縮</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">探偵シート</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">ウソ見破り</span>
             </div>
             <a href="articles/day5-friday-exam-fast-factcheck.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-rose-600 flex items-center justify-center gap-1.5">
-              <span>第5弾（期末作問＆AI探偵）を今すぐ読む</span>
+              <span>第5弾（作問時短＆ファクトチェック）を今すぐ読む</span>
               <i class="fa-solid fa-arrow-right text-[11px]"></i>
             </a>
           </div>
         </div>
       </article>
 
-      <!-- Day 6: 学級崩壊防止・ピア指導 -->
-      <article data-category="peer" data-keywords="学級崩壊防止 ピア指導 ピアチューター 協働的な学び 11月 焦る生徒 進路決定 委員会総括" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 6: 学級崩壊防止・協働 -->
+      <article data-week="week1" data-category="peer" data-keywords="学級崩壊防止 ピア指導 ピアチューター 協働的な学び 11月 焦る生徒 進路決定 委員会総括 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -493,7 +515,7 @@
             <span class="bg-slate-900/60 backdrop-blur-xs text-indigo-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">11月危機対応</span>
           </div>
           <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
-            ピア指導 学級マネジメント
+            ピア・チューター任命＆学級マネジメント
           </h4>
           <div class="relative z-10 flex justify-end">
             <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
@@ -510,25 +532,25 @@
               </a>
             </h3>
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
-              早期合格・内定組を邪魔者にせず、模擬面接官役「ピア・チューター」に任命してクラスの誇りある戦力に変える。
+              早期合格・内定組を邪魔者にせず、模擬面接官役「ピア・チューター」に任命してクラスの誇りある戦力に変える現場処方箋。
             </p>
           </div>
           <div class="space-y-3.5 pt-1">
             <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">協働学習</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">11月対策</span>
-              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">学級安定</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">分断防止</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">内定組戦力化</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">任命書テンプレ</span>
             </div>
             <a href="articles/day6-saturday-classroom-peer-tutoring.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-indigo-600 flex items-center justify-center gap-1.5">
-              <span>第6弾（ピア学級マネジメント）を今すぐ読む</span>
+              <span>第6弾（ピア・チューター指導案）を今すぐ読む</span>
               <i class="fa-solid fa-arrow-right text-[11px]"></i>
             </a>
           </div>
         </div>
       </article>
 
-      <!-- Day 7: インクルーシブ総括・ギガ死対策 -->
-      <article data-category="inclusive" data-keywords="インクルーシブ Wi-Fiなし ギガ死 通信制限 貧困 オフライン ルビ Lex-Sentry" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+      <!-- Day 7: インクルーシブ総括 -->
+      <article data-week="week1" data-category="inclusive" data-keywords="インクルーシブ Wi-Fiない ギガ死 通信制限 貧困 オフライン ルビ Lex-Sentry 第1週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
         <!-- 上部アイキャッチヘッダー -->
         <div class="bg-gradient-to-br from-teal-500 via-cyan-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
           <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
@@ -574,7 +596,664 @@
         </div>
       </article>
 
-    </div>
+      <!-- Day 8: 即効性授業・出欠 -->
+      <article data-week="week2" data-category="kahoot" data-keywords="Forms スプレッドシート 出欠 チェックイン 体調SOS 前時理解度 即効性 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-sky-500 via-cyan-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-sky-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第8弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">即効性授業・出欠</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-sky-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">Forms連動</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            Forms×スプレッドシート 3分チェックイン
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.09
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-sky-600 transition">
+              <a href="articles/day8-monday-forms-checkin.html">
+                【コピペで即稼働】週明けの遅刻・体調不良・前時理解度を3分で可視化する「Forms×スプレッドシート」週初めチェックイン
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              月曜朝の重い空気と遅刻・体調SOSをスマホ1分回答で把握。条件付き書式で要注意生徒を即座に特定し、授業の入りを滑らかに。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">自動色分け</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">体調・理解度</span>
+            </div>
+            <a href="articles/day8-monday-forms-checkin.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-sky-600 flex items-center justify-center gap-1.5">
+              <span>第8弾（3分チェックイン）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 9: つまずき救出・理数 -->
+      <article data-week="week2" data-category="translation" data-keywords="数学 理科 つまずき特定 3段階ヒント 思考の足場 スキャフォールディング 個別最適化 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-emerald-500 via-teal-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-emerald-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第9弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">つまずき救出・理数</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-emerald-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">思考の足場</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            数学・理科 つまずき3段階ヒント処方箋
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.10
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-emerald-600 transition">
+              <a href="articles/day9-tuesday-math-science-hint.html">
+                「どこがわからないかすら言えない」生徒へ──数学・理科のつまずき箇所をAIが特定する【3段階ヒント処方箋】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              教科書の問題文を入れるだけで「公式の思い出し」「立式のヒント」「答えの一歩手前」を自動出力。解答丸写しとふて寝を根絶。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 1分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">自力脱出</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">個別最適化</span>
+            </div>
+            <a href="articles/day9-tuesday-math-science-hint.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-emerald-600 flex items-center justify-center gap-1.5">
+              <span>第9弾（3段階ヒント処方箋）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 10: 提出物マネジメント -->
+      <article data-week="week2" data-category="dialogue" data-keywords="提出物未提出ゼロ Canva リマインダー ToDo可視化 学級経営 ワーク提出 期末前 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-purple-500 via-indigo-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-purple-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第10弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">提出物マネジメント</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-purple-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">未提出ゼロ</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            期末前 提出物未提出ゼロ化ボード
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.11
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-purple-600 transition">
+              <a href="articles/day10-wednesday-canva-task-board.html">
+                期末前の「提出物未提出ゼロ」へ！Canva×リマインダー自動生成で生徒が自発的に動く【残タスク可視化ボード】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              黒板での口頭催促を全廃。視覚優位・ワーキングメモリの弱い生徒も一目で締切と日割りノルマがわかるグラフィカルToDo設計。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 5分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">視覚支援</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">Canva連動</span>
+            </div>
+            <a href="articles/day10-wednesday-canva-task-board.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-purple-600 flex items-center justify-center gap-1.5">
+              <span>第10弾（提出物可視化ボード）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 11: 面接対策・進路 -->
+      <article data-week="week2" data-category="career" data-keywords="推薦入試 就職面接 面接官シミュレーター 変化球質問 圧迫面接 音声対話 ロールプレイ 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-amber-500 via-orange-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-amber-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第11弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">面接対策・進路</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">変化球対応</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            推薦・就職面接 AI模擬面接官
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.12
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-amber-600 transition">
+              <a href="articles/day11-thursday-interview-simulator.html">
+                推薦・就職面接直前「頭が真っ白」を防ぐ──変化球・圧迫質問に動じない【AI面接官シミュレーター】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              丸暗記スピーチの崩壊を防止。スマホ音声入力でAI面接官と無限に対話練習し、予期せぬ深掘り質問への3秒切り返し力を鍛える。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 1分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">音声対話</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">無制限反復</span>
+            </div>
+            <a href="articles/day11-thursday-interview-simulator.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-amber-600 flex items-center justify-center gap-1.5">
+              <span>第11弾（AI面接官シミュレーター）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 12: 校務時短・採点自動化 -->
+      <article data-week="week2" data-category="exam" data-keywords="期末考査 採点自動化 OCR 記述採点 スプレッドシート関数 ルーブリック 残業削減 校務 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-rose-500 via-red-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-rose-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第12弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">校務時短・採点自動化</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-rose-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">残業3h削減</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            期末考査 採点・集計3時間時短ハック
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.13
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-rose-600 transition">
+              <a href="articles/day12-friday-exam-grading-ocr.html">
+                期末考査の採点地獄を脱出！スプレッドシート関数×OCR記述採点で「週末残業を3時間削る」校務ハック
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              記述問題の採点ブレを防ぐ3点刻みルーブリックと、得点集計・観点別評価・赤点判定を一発で終わらせる関数テンプレート。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 10分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">OCR記述</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">関数テンプレ</span>
+            </div>
+            <a href="articles/day12-friday-exam-grading-ocr.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-rose-600 flex items-center justify-center gap-1.5">
+              <span>第12弾（採点集計時短ハック）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 13: 部活動・顧問支援 -->
+      <article data-week="week2" data-category="peer" data-keywords="冬期部活動 顧問負担半減 怪我防止 日没時短 アジリティ スポーツ科学 専門外顧問 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-blue-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第13弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">部活動・顧問支援</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-blue-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">怪我防止</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            冬期部活動 顧問負担半減メニュー作成AI
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.14
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-blue-600 transition">
+              <a href="articles/day13-saturday-club-winter-training.html">
+                冬期部活動の顧問負担を半減！怪我防止・日照不足を克服する「AI筋力・アジリティ練習メニュー作成法」
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              日没後の暗闇練習による事故を防ぐ。専門外の顧問でも45分で生徒を安全・高密度に鍛えられるスポーツ科学メニュー生成術。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">日没時短</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">専門外顧問</span>
+            </div>
+            <a href="articles/day13-saturday-club-winter-training.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-blue-600 flex items-center justify-center gap-1.5">
+              <span>第13弾（冬期部活時短メニュー）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 14: 別室登校・不登校支援 -->
+      <article data-week="week2" data-category="inclusive" data-keywords="保健室登校 別室登校 サイレントオンライン教室 非同期学習 出席認定 不登校支援 第2週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-teal-500 via-cyan-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-teal-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第14弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">別室登校・不登校支援</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-cyan-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">別室登校対応</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            教室に入れない生徒を支えるサイレント教室
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.15
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-teal-600 transition">
+              <a href="articles/day14-sunday-silent-classroom.html">
+                「教室に入れない」生徒の学びを止めない──保健室登校・別室登校をつなぐ【サイレントオンライン教室】設計
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              カメラ・マイクOFFで静かに参加。授業スライド要約とスタンプ1つで出席認定・学習進度をキープするハイブリッド居場所設計。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 5分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">非同期学習</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">テキスト対話</span>
+            </div>
+            <a href="articles/day14-sunday-silent-classroom.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-teal-600 flex items-center justify-center gap-1.5">
+              <span>第14弾（サイレント教室設計）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 15: 考査返却・学力定着 -->
+      <article data-week="week3" data-category="translation" data-keywords="考査返却 赤点救出 誤答分析 類題生成 解き直し処方箋 復習 学力定着 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-sky-500 via-blue-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-sky-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第15弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">考査返却・学力定着</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">赤点救出</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            考査返却日 個別解き直し処方箋AI
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.16
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-sky-600 transition">
+              <a href="articles/day15-monday-exam-retake-rx.html">
+                【考査返却日】赤点で絶望した生徒を立ち直らせる！AIがつくる【個別解き直し処方箋シート】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              模範解答を赤ペンで写すだけの不毛な作業を全廃。生徒の誤答パターンからつまずき原因を分析し、類題3問でリベンジさせる。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">誤答分析</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">類題生成</span>
+            </div>
+            <a href="articles/day15-monday-exam-retake-rx.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-sky-600 flex items-center justify-center gap-1.5">
+              <span>第15弾（個別解き直し処方箋）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 16: 校務時短・通知表所見 -->
+      <article data-week="week3" data-category="exam" data-keywords="通知表所見 指導要録 エピソード変換 校務時短 個人情報保護 文科省準拠 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-emerald-500 via-teal-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-emerald-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第16弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">校務時短・通知表所見</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-emerald-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">所見時短</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            指導要録・通知表所見 1人3分作成プロンプト
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.17
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-emerald-600 transition">
+              <a href="articles/day16-tuesday-report-card-comments.html">
+                【校務時短】指導要録・通知表の所見作成を1人3分に短縮！生徒の良さを掘り起こす【エピソード変換プロンプト】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              個人情報を完全保護した状態で、1行の行動メモから文科省指針準拠の温かい教育的所見を一括生成。年末の徹夜残業を撲滅。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 2分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">個人情報保護</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">文科省準拠</span>
+            </div>
+            <a href="articles/day16-tuesday-report-card-comments.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-emerald-600 flex items-center justify-center gap-1.5">
+              <span>第16弾（通知表所見3分作成）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 17: 保護者対応・面談マネジメント -->
+      <article data-week="week3" data-category="dialogue" data-keywords="三者面談 保護者対応 アジャストシート クレーム防止 事前アンケート 対立回避 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-purple-500 via-indigo-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-purple-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第17弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">保護者対応・面談マネジメント</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-purple-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">クレーム防止</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            三者面談の修羅場を防ぐ アジャストシートAI
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.18
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-purple-600 transition">
+              <a href="articles/day17-wednesday-parent-teacher-conference.html">
+                三者面談の修羅場を未然に防ぐ！保護者の本音と不安を事前に解きほぐす【三者面談アジャストシート】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              面談当日の怒号や対立を回避。事前アンケートで保護者の要望と生徒の本音を可視化し、面談室を「裁判所」から「協働の場」へ。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 5分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">本音引き出し</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">対立回避</span>
+            </div>
+            <a href="articles/day17-wednesday-parent-teacher-conference.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-purple-600 flex items-center justify-center gap-1.5">
+              <span>第17弾（三者面談アジャストシート）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 18: 探究・実習・AIリテラシー -->
+      <article data-week="week3" data-category="career" data-keywords="実習レポート 課題研究 AI丸写し ルーブリック評価 一次情報 五感記録 探究学習 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-amber-500 via-orange-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-amber-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第18弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">探究・実習・AIリテラシー</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-amber-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">丸写し指導</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            実習レポート AI丸写し対策ルーブリック
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.19
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-amber-600 transition">
+              <a href="articles/day18-thursday-report-rubric-eval.html">
+                実習レポート・課題研究の「AI丸写し」を見破り指導へ変える！ルーブリック評価自動化プロンプト
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              AI禁止の不毛なイタチごっこを脱出。生徒の手触り感・五感の記録・失敗した生データを最高評価にする4段階ルーブリック。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">ルーブリック</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">現場観察記録</span>
+            </div>
+            <a href="articles/day18-thursday-report-rubric-eval.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-amber-600 flex items-center justify-center gap-1.5">
+              <span>第18弾（実習レポートルーブリック）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 19: 冬期課題・探究学習 -->
+      <article data-week="week3" data-category="kahoot" data-keywords="冬休み宿題 コピペ無効化 自分事化 ミッション課題 家庭生活 コンビニ調査 探究 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-rose-500 via-red-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-rose-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第19弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">冬期課題・探究学習</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-rose-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">コピペ無効</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            冬休みの宿題 コピペ無効化ミッション
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.20
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-rose-600 transition">
+              <a href="articles/day19-friday-winter-homework-mission.html">
+                冬休みの宿題コピペを無力化する！身近な生活と結びつける【自分事化ミッション型課題】生成術
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              検索してもAIに聞いても答えが出ない「自宅の冷蔵庫調査」「家族インタビュー」等、身近な生活と結びつける良問生成術。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 5分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">自分事化</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">家庭結びつき</span>
+            </div>
+            <a href="articles/day19-friday-winter-homework-mission.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-rose-600 flex items-center justify-center gap-1.5">
+              <span>第19弾（自分事化ミッション課題）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 20: 教務・管理職・次年度準備 -->
+      <article data-week="week3" data-category="exam" data-keywords="シラバス 年間指導計画 教務 管理職 観点別評価 時数計算 自動化 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-blue-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第20弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">教務・管理職・次年度準備</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-blue-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">シラバス半日</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            次年度シラバス・年間指導計画 改訂AI
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.21
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-blue-600 transition">
+              <a href="articles/day20-saturday-syllabus-annual-plan.html">
+                学年主任・教務必見！次年度シラバス・年間指導計画の改訂作業を半日で終わらせる【AIシラバス統合プロンプト】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              年間授業時数計算、3観点別評価規準の整合性チェック、ICT活用計画をAIが一気通貫でチェック。3学期の書類地獄を解消。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 10分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">観点別評価</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">時数計算自動化</span>
+            </div>
+            <a href="articles/day20-saturday-syllabus-annual-plan.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-blue-600 flex items-center justify-center gap-1.5">
+              <span>第20弾（シラバス改訂AI）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day 21: インクルーシブ・福祉連携 -->
+      <article data-week="week3" data-category="inclusive" data-keywords="インクルーシブ 福祉連携 困窮家庭支援 ルビ 多言語 レター 給付金 フードバンク 第3週" class="article-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+        <!-- 上部アイキャッチヘッダー -->
+        <div class="bg-gradient-to-br from-teal-500 via-cyan-600 to-slate-800 p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between min-h-[160px] text-white">
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none"></div>
+          <div class="relative z-10 flex justify-between items-center gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="bg-teal-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-md shadow-xs">第21弾</span>
+              <span class="bg-slate-900/60 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md border border-white/10">インクルーシブ・福祉連携</span>
+            </div>
+            <span class="bg-slate-900/60 backdrop-blur-xs text-emerald-300 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-white/10 tracking-wider">困窮家庭支援</span>
+          </div>
+          <h4 class="relative z-10 text-xl sm:text-2xl font-black text-white text-center my-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] tracking-tight py-2 leading-tight">
+            長期休業前の困窮・孤立を防ぐ公的支援レター
+          </h4>
+          <div class="relative z-10 flex justify-end">
+            <span class="bg-slate-900/60 backdrop-blur-xs text-slate-200 text-[10px] px-2.5 py-0.5 rounded-full font-medium border border-white/10">
+              公開日：2026.11.22
+            </span>
+          </div>
+        </div>
+        <!-- 下部コンテンツエリア -->
+        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-sm sm:text-base font-black text-slate-900 leading-snug group-hover:text-teal-600 transition">
+              <a href="articles/day21-sunday-inclusive-welfare-letter.html">
+                長期休業前の「家庭困窮・孤立」を見落とさない──給付金・公的支援案内を届ける【ルビ付き多言語レター】
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+              年末年始の孤立と困窮を防ぐ。就学援助やフードバンク情報を、やさしい日本語・全漢字ルビ・ポルトガル語で届ける案内状。
+            </p>
+          </div>
+          <div class="space-y-3.5 pt-1">
+            <div class="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] text-slate-600 font-bold">
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">準備 3分</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">ルビ完備</span>
+              <span class="bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md">多言語対応</span>
+            </div>
+            <a href="articles/day21-sunday-inclusive-welfare-letter.html" class="block w-full py-2.5 px-4 text-center bg-slate-900 hover:bg-slate-800 text-white font-black text-xs rounded-xl transition shadow-sm group-hover:bg-teal-600 flex items-center justify-center gap-1.5">
+              <span>第21弾（公的支援多言語レター）を今すぐ読む</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      </div>
   </main>
 
   <!-- 8. フッター (BizHack風 規約遵守・倫理方針) -->
@@ -634,181 +1313,92 @@
 
   <!-- インタラクティブ・スクリプト（リアルタイム検索・カテゴリ絞込・モーダル） -->
   <script>
-    let currentCategory = 'all';
-    let currentQuery = '';
+      let currentCategory = 'all';
+      let currentWeek = 'all';
+      let currentQuery = '';
 
-    // 検索ハンドラー
-    function handleSearch(val) {
-      currentQuery = val.trim().toLowerCase();
-      const clearBtn = document.getElementById('search-clear-btn');
-      if (clearBtn) {
-        clearBtn.classList.toggle('hidden', currentQuery === '');
-      }
-      applyFilters();
-    }
-
-    // 検索クリア
-    function clearSearch() {
-      const input = document.getElementById('search-input');
-      if (input) input.value = '';
-      currentQuery = '';
-      document.getElementById('search-clear-btn').classList.add('hidden');
-      applyFilters();
-    }
-
-    // カテゴリフィルター
-    function filterCategory(cat) {
-      currentCategory = cat;
-      // ボタンのアクティブクラス更新
-      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
-        btn.classList.remove('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
-        btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
-      });
-      const activeBtn = document.getElementById(`cat-btn-${cat}`);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
-        activeBtn.classList.add('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
-      }
-      applyFilters();
-    }
-
-    // フィルター統合実行
-    function applyFilters() {
-      const cards = document.querySelectorAll('.article-card');
-      let visibleCount = 0;
-
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        const keywords = card.getAttribute('data-keywords') ? card.getAttribute('data-keywords').toLowerCase() : '';
-        const textContent = card.innerText.toLowerCase();
-
-        const matchCat = (currentCategory === 'all' || cat === currentCategory);
-        const matchQuery = (currentQuery === '' || keywords.includes(currentQuery) || textContent.includes(currentQuery));
-
-        if (matchCat && matchQuery) {
-          card.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          card.classList.add('hidden');
+      // 週間フィルター
+      function filterWeek(week) {
+        currentWeek = week;
+        document.querySelectorAll('.week-filter-btn').forEach(btn => {
+          btn.classList.remove('bg-slate-900', 'text-white', 'shadow-xs');
+          btn.classList.add('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
+        });
+        if (event && event.currentTarget) {
+          event.currentTarget.classList.remove('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
+          event.currentTarget.classList.add('bg-slate-900', 'text-white', 'shadow-xs');
         }
-      });
-
-      // カウント＆通知バー更新
-      const visibleCountElem = document.getElementById('visible-count');
-      if (visibleCountElem) visibleCountElem.textContent = visibleCount;
-      const statusBar = document.getElementById('search-status-bar');
-      const noResults = document.getElementById('no-results-msg');
-      const conditionText = document.getElementById('filter-condition-text');
-      const filteredNum = document.getElementById('filtered-num');
-
-      const isFiltered = (currentCategory !== 'all' || currentQuery !== '');
-      statusBar.classList.toggle('hidden', !isFiltered);
-
-      if (isFiltered) {
-        let conditionDesc = [];
-        if (currentCategory !== 'all') {
-          const catLabels = {
-            kahoot: '即効性授業・Kahoot!',
-            translation: '現場語翻訳',
-            exam: '校務時短・作問',
-            dialogue: '学級対話・Padlet',
-            career: '実務・就職伴走',
-            peer: 'ピア・学級マネジメント',
-            inclusive: 'インクルーシブ総括'
-          };
-          conditionDesc.push(`カテゴリ: ${catLabels[currentCategory] || currentCategory}`);
-        }
-        if (currentQuery !== '') {
-          conditionDesc.push(`キーワード: "${currentQuery}"`);
-        }
-        conditionText.textContent = conditionDesc.join(' ＋ ');
-        filteredNum.textContent = visibleCount;
+        applyFilters();
       }
 
-      noResults.classList.toggle('hidden', visibleCount > 0);
-    }
-
-    // 全フィルターリセット
-    function resetFilters() {
-      clearSearch();
-      filterCategory('all');
-    }
-
-    // モーダルコンテンツ定義
-    const modalContents = {
-      workflow: {
-        title: '<i class="fa-solid fa-robot text-sky-600"></i> 自律型AIエージェント日刊制作体制',
-        body: `
-          <p><strong>EduAnchor AI</strong> は、現場の多忙な先生方に毎朝6:30、信頼できる即効性教材をお届けするため、役割分担された自律型エージェントチームによって運営されています。</p>
-          <div class="space-y-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
-            <p><strong>① 若手ルーキーAI:</strong> 採用3年目視点で「明日1時間目にすぐ使える直感性・即効性」を追求。</p>
-            <p><strong>② 普通科・実務科教員AI:</strong> 偏差値や生徒の家庭環境に左右されない汎用的な発問・プロンプトを設計。</p>
-            <p><strong>③ ベテラン再任用教諭AI:</strong> 指導要領の趣旨や学級崩壊リスク、生徒指導上の配慮を厳格に査読。</p>
-            <p><strong>④ Lex-Sentry（法務・監査AI）:</strong> 著作権法第35条（学校教育利用）および個人情報保護基準を100%パスしたもののみを日刊公開。</p>
-          </div>
-          <p class="text-[11px] text-slate-500">※すべて実機検証・教室環境シミュレーションを経て配信されています。</p>
-        `
-      },
-      policy: {
-        title: '<i class="fa-solid fa-compass text-amber-500"></i> メディア運営方針（メディア理念）',
-        body: `
-          <p><strong>EduAnchor AI（エデュアンカー）</strong> は、「揺れる教室をつなぎ止める」を合言葉に、多様な生徒と激務に向き合う先生方の放課後残業を削減し、生徒と向き合う時間を生み出す教育AI総合実践ナビです。</p>
-          <p>完璧な指導案ではなく「明日そのまま使えるコピペ教材」と、生徒のつまずきに寄り添う「現場語翻訳」を最優先に配信します。</p>
-        `
-      },
-      legal: {
-        title: '<i class="fa-solid fa-scale-balanced text-sky-600"></i> 法務・著作権監査基準（著作権法第35条適合）',
-        body: `
-          <p>当サイトが提供するすべての教材・プロンプト・CSVデータは、学校その他の教育機関における複製・公衆送信等を定めた<strong>著作権法第35条</strong>の範囲内で教員が適法かつ安心して利用できるよう、Lex-Sentry法務監査ユニットによる事前チェックを実施しています。</p>
-          <p>市販教科書や出版物の無断転載・同一性侵害を行わず、引用の目的上正当な範囲内での変換・要約に留めています。</p>
-        `
-      },
-      pr: {
-        title: '<i class="fa-solid fa-shield-halved text-emerald-600"></i> ステルスマーケティング規制・PR表記基準',
-        body: `
-          <p>当サイトは消費者庁のステルスマーケティング規制（景品表示法）を遵守しています。教材内で紹介する外部ICTツール（Kahoot!, Padlet, ChatGPT, Claude等）の推奨は、現場での実効性に基づいた編集部の客観的評価であり、特定企業からの金銭的便宜を受けた広告宣伝ではありません。</p>
-        `
-      },
-      privacy: {
-        title: '<i class="fa-solid fa-user-shield text-indigo-600"></i> プライバシーポリシー（個人情報保護方針）',
-        body: `
-          <p>当サイトは、利用者の個人情報を適切に管理し、事前の同意なく第三者に開示・提供することはありません。また、掲載するプロンプトや事例において、特定の生徒・保護者・教員の個人情報や実名が特定される記述は一切含まれておりません。</p>
-        `
-      },
-      contact: {
-        title: '<i class="fa-solid fa-envelope text-sky-600"></i> お問い合わせ',
-        body: `
-          <p>教材の不具合報告、実践事例のご提供、学校・自治体での導入相談は、下記編集委員会までご連絡ください。</p>
-          <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
-            <p><strong>EduAnchor AI 記事作成委員会 編集部</strong></p>
-            <p class="text-sky-600 font-mono">editorial@edu-anchor.internal.local</p>
-            <p class="text-[11px] text-slate-500 mt-1">※原則2営業日以内に担当AIエージェントまたは編集員よりご返信いたします。</p>
-          </div>
-        `
+      // カテゴリフィルター
+      function filterCategory(cat) {
+        currentCategory = cat;
+        document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+          btn.classList.remove('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
+          btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
+        });
+        if (event && event.currentTarget) {
+          event.currentTarget.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
+          event.currentTarget.classList.add('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
+        }
+        applyFilters();
       }
-    };
 
-    function openModal(type) {
-      const data = modalContents[type];
-      if (!data) return;
-      document.getElementById('modal-title').innerHTML = data.title;
-      document.getElementById('modal-body').innerHTML = data.body;
-      const modal = document.getElementById('info-modal');
-      modal.classList.remove('hidden');
-    }
+      // フィルターリセット
+      function resetFilters() {
+        currentCategory = 'all';
+        currentWeek = 'all';
+        currentQuery = '';
+        document.querySelectorAll('.week-filter-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.classList.add('bg-slate-900', 'text-white', 'shadow-xs');
+            btn.classList.remove('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
+          } else {
+            btn.classList.remove('bg-slate-900', 'text-white', 'shadow-xs');
+            btn.classList.add('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
+          }
+        });
+        document.querySelectorAll('.cat-filter-btn').forEach((btn, idx) => {
+          if (idx === 0) {
+            btn.classList.add('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
+            btn.classList.remove('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
+          } else {
+            btn.classList.remove('bg-sky-600', 'text-white', 'border-sky-600', 'shadow-xs');
+            btn.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200', 'shadow-2xs');
+          }
+        });
+        applyFilters();
+      }
 
-    function closeModal() {
-      const modal = document.getElementById('info-modal');
-      modal.classList.add('hidden');
-    }
+      // 統合フィルター実行
+      function applyFilters() {
+        const cards = document.querySelectorAll('.article-card');
+        let visibleCount = 0;
 
-    // モーダル背景クリック＆Escキーで閉じる
-    document.getElementById('info-modal').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeModal();
-    });
-  </script>
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          const week = card.getAttribute('data-week');
+          const keywords = card.getAttribute('data-keywords') ? card.getAttribute('data-keywords').toLowerCase() : '';
+          const textContent = card.innerText.toLowerCase();
+
+          const matchCat = (currentCategory === 'all' || cat === currentCategory);
+          const matchWeek = (currentWeek === 'all' || week === currentWeek);
+          const matchQuery = (currentQuery === '' || keywords.includes(currentQuery) || textContent.includes(currentQuery));
+
+          if (matchCat && matchWeek && matchQuery) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        const noResults = document.getElementById('no-results-msg');
+        if (noResults) {
+          noResults.classList.toggle('hidden', visibleCount > 0);
+        }
+      }
+    </script>
 </body>
 </html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「どこがわからないかすら言えない」生徒へ──数学・理科のつまずき箇所をAIが特定する【3段階ヒント処方箋】 ｜ EduAnchor AI</title>
+  <!-- ファビコン ＆ OGP -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <meta property="og:title" content="「どこがわからないかすら言えない」生徒へ──数学・理科のつまずき箇所をAIが特定する【3段階ヒント処方箋】 ｜ EduAnchor AI">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/character/shiori_guide_main.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- トップバー -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="bg-emerald-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第9弾</span>
+        <span>第2週 日刊実践連載 ｜ 朝6:30配信</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-slate-400"><i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-sm">
+          <i class="fa-solid fa-anchor text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+          <span class="block text-[9px] text-slate-400 font-medium -mt-1">現場教員のためのAI×実践ICTナビ</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="../articles.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 transition">実践記事一覧</a>
+        <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
+          <i class="fa-solid fa-house"></i> <span>トップ</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- メイン記事エリア -->
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full space-y-8 sm:space-y-10">
+
+    <!-- 記事ヘッダー -->
+    <header class="space-y-4 border-b border-slate-200 pb-6">
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <span class="bg-emerald-500 text-white font-black px-2.5 py-1 rounded-md">第9弾</span>
+        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">つまずき救出・個別最適化</span>
+        <span class="text-slate-400">公開日：2026-11-10</span>
+      </div>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+        「どこがわからないかすら言えない」生徒へ──数学・理科のつまずき箇所をAIが特定する【3段階ヒント処方箋】
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+        「先生、全然わかりません」と白紙のノートを前にフリーズする生徒。どこで止まっているのか問いただしても沈黙するばかり。教科書の問題文を入れるだけで「公式の思い出し」「補助線・立式のヒント」「答えの一歩手前」の3段階ヒントを瞬時に出力するプロンプトです。
+      </p>
+      
+      <!-- 担当ユニット & 監査バッジ -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 bg-slate-100/70 p-3 rounded-xl border border-slate-200">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-users-gear text-sky-600"></i>
+          <span><strong>担当</strong>: 一般普通科教員AI（数学・情報）× 再任用教諭AI（元指導主事・歴38年）</span>
+        </div>
+        <div class="flex items-center gap-2 text-emerald-700 font-bold">
+          <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+          <span>Lex-Sentry 審査済（第2026-1110B号）</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 水先栞のアドバイス（導入） -->
+    <div class="bg-gradient-to-r from-sky-50 via-sky-100/50 to-blue-50 border border-sky-200 rounded-2xl p-4 sm:p-5 shadow-xs flex items-start gap-4">
+      <div class="relative shrink-0">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+          <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+          伴走中
+        </span>
+      </div>
+      <div class="flex-1 text-xs sm:text-sm">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="font-bold text-slate-900">水先 栞</span>
+          <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専任ICT伴走ナビゲーター</span>
+        </div>
+        <p class="text-slate-700 leading-relaxed">
+          「『全部教えてもらう』と『自分で解けた』の間には大きな自信の差があります。3段階ヒントがあれば、先生が教室中を走り回らなくても、生徒同士でヒントを教え合う温かい空気が生まれますよ！」
+        </p>
+      </div>
+    </div>
+
+    <!-- セクション1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-sky-600 pl-3">
+        1. 生徒が「わからない」と言うときの脳内メカニズム
+      </h2>
+      <div class="text-sm sm:text-base text-slate-700 leading-relaxed space-y-3">
+        <p>生徒が「わからない」と口にするとき、多くは問題全体が理解できないのではなく、「日本語の文章を数式に変換する最初の一歩」や「どの公式を取り出すか」の引き出しが見つからない状態です。<br>いきなり全解答を教えると「写して終わり」になり、何も教えないと「ふて寝」します。必要なのは、生徒が自力で1段ずつ登れる『思考の足場（スキャフォールディング）』です。</p>
+      </div>
+    </section>
+
+    <!-- セクション2（プロンプト・実例） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-emerald-600 pl-3">
+        2. つまずき箇所別 3段階ヒント自動生成プロンプト
+      </h2>
+      <p class="text-sm text-slate-600">
+        以下のプロンプトに教科書や問題集の問題文を貼り付けるだけで、生徒用ヒントカードが完成します。
+      </p>
+
+      <!-- プロンプト枠 -->
+      <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 text-white space-y-2.5 shadow-md">
+        <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-2">
+          <span class="font-bold text-amber-400"><i class="fa-solid fa-terminal mr-1.5"></i>【3段階ヒント生成プロンプト】</span>
+          <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">コピペ推奨</span>
+        </div>
+        <pre class="text-xs sm:text-sm text-slate-200 font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto"># 命令
+以下の【問題】について、生徒が自力で解くための「3段階ヒント」を作成してください。
+
+# 制約
+- ヒント1【公式・言葉の引き出し】: 使う公式や用語だけを提示。計算は一切書かない。
+- ヒント2【問題文の言い換え・立式の足場】: 日本語の条件を簡単な図や式にする手順を示す。
+- ヒント3【あと一手で答え】: 最後の計算の一歩手前の式を示し、計算だけを生徒に委ねる。
+- 中学2年生でも直感的に読めるやさしい日本語で、各ヒント50文字以内。
+
+# 【問題】
+[ここに教科書・ワークの問題文を貼り付け]</pre>
+      </div>
+
+      <!-- 入出力実例 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 space-y-2">
+          <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+            <i class="fa-solid fa-arrow-right-to-bracket text-sky-600"></i> 入力実例
+          </h4>
+          <p class="text-xs text-slate-600 font-mono whitespace-pre-wrap">高校数学I：2次関数 y = x^2 - 4x + 1 の頂点の座標を求めよ。</p>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 space-y-2">
+          <h4 class="text-xs font-black text-emerald-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> AI出力実例
+          </h4>
+          <p class="text-xs text-emerald-950 font-mono whitespace-pre-wrap">・ヒント1: 「平方完成」を使って y = (x - p)^2 + q の形に変形するよ！
+・ヒント2: x^2 - 4x に注目。(x - 2)^2 を展開すると +4 が余計に出てくるよね？
+・ヒント3: y = (x - 2)^2 - 4 + 1 だから、y = (x - 2)^2 - 3。頂点は(p, q)だよ！</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション3（タイムライン） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-amber-500 pl-3">
+        3. 机間巡視での活用手順（1分声かけ）
+      </h2>
+      <div class="space-y-3">
+        
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">巡視開始: 鉛筆が止まっている生徒を見つけたら、「どこまで読めた？ヒント1見る？」と声をかける。</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">自己選択: 生徒自身に「ヒント1でいけそう？ヒント2にする？」と選ばせる（自己決定感）。</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">解けた瞬間: 「自力で階段登れたね！」と認めることで、解答丸写しを根絶。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション4（NG指導とリカバリー） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-rose-500 pl-3">
+        やってはいけないNG指導と現場のリカバリー策
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 space-y-2">
+          <h3 class="text-xs sm:text-sm font-black text-rose-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> やってはいけないNG指導：いきなり赤ペンで式を最後まで書いてあげる
+          </h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            親切心のつもりで教員が解答を書き上げてしまうと、生徒の脳は「困ったら先生がやってくれる」と学習性無力感に陥ります。教員はヒントを渡すだけで、最後の鉛筆を動かすのは必ず生徒本人にさせてください。
+          </p>
+        </div>
+        <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 space-y-2">
+          <h3 class="text-xs sm:text-sm font-black text-sky-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-life-ring text-sky-600"></i> 現場のリカバリー策：印刷して教卓に置く「ヒントバイキング」
+          </h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            1対1で教える時間がない場合は、3段階ヒントを印刷して教卓に伏せて置いておき、「困った人は見に来ていいよ」というヒントバイキング形式にします。自ら立ち上がって情報を取りに行く主体性が育ちます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション5（AIペルソナ読者レビュー） -->
+    <section class="space-y-4 pt-4 border-t border-slate-200">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+        <i class="fa-solid fa-comments text-sky-600"></i> AIペルソナ読者団による現場検証レビュー
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">基礎学力不振生徒</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「ヒント1だけ見て解けたとき、めっちゃ嬉しかった。答えをそのまま見せられるとバカにされた気になるけど、これなら恥ずかしくない。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">中堅困難校担任</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「放課後の居残り指導で重宝している。生徒が『ヒント2ください』と言えるようになっただけで、指導のストレスが半減した。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">境界知能生徒支援</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「漢字が苦手な生徒にはヒントにルビを振るだけで、自力で問題に向き合える時間が明らかに伸びました。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">辛口批判特命AI</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「実効性が高い。単なるAI解答作成ではなく、教員の机間指導の負荷を減らす足場設計になっている点を評価する。」</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 配布アセット -->
+    <div class="bg-slate-900 text-white p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+      <div class="space-y-1 text-center sm:text-left">
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">現場直撃・無料配布アセット</span>
+        <h4 class="text-base font-black">教科別3段階ヒントプロンプト＆ヒントカード台紙（無料ダウンロード）</h4>
+        <p class="text-xs text-slate-400">著作権法第35条の範囲内で校内利用・編集が自由に行えます。</p>
+      </div>
+      <a href="../contact.html" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition whitespace-nowrap shadow-md flex items-center gap-2">
+        <i class="fa-solid fa-download"></i> <span>教材一式を請求・活用</span>
+      </a>
+    </div>
+
+    <!-- 前後の記事ナビゲーション -->
+    <div class="flex justify-between items-center gap-4 pt-6 border-t border-slate-200 text-xs font-bold">
+      <a href="day8-... .html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
+        <i class="fa-solid fa-arrow-left"></i> <span>前の記事へ</span>
+      </a>
+      <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition">
+        連載記事一覧へ
+      </a>
+      <a href="day10-...html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
+        <span>次の記事へ</span> <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-3">
+      <p class="text-slate-500 text-[11px]">EduAnchor AI（エデュアンカー） ｜ 現場教員のための「AI×実践ICT」総合実践ナビ</p>
+      <div class="flex justify-center gap-4 text-xs font-medium">
+        <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="../terms.html" class="hover:text-white transition">利用規約</a>
+      </div>
+      <p class="text-[10px] text-slate-600">© 2026 EduAnchor AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【コピペで即稼働】週明けの遅刻・体調不良・前時理解度を3分で可視化する「Forms×スプレッドシート」週初めチェックイン ｜ EduAnchor AI</title>
+  <!-- ファビコン ＆ OGP -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <meta property="og:title" content="【コピペで即稼働】週明けの遅刻・体調不良・前時理解度を3分で可視化する「Forms×スプレッドシート」週初めチェックイン ｜ EduAnchor AI">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/character/shiori_guide_main.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+    body { font-family: 'Noto Sans JP', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- トップバー -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="bg-sky-500 text-slate-950 font-bold px-2 py-0.5 rounded text-[10px]">第8弾</span>
+        <span>第2週 日刊実践連載 ｜ 朝6:30配信</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-slate-400"><i class="fa-solid fa-scale-balanced mr-1 text-sky-400"></i>著作権法第35条適合</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 shadow-sm">
+          <i class="fa-solid fa-anchor text-lg"></i>
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight text-slate-900">EduAnchor <span class="text-sky-600">AI</span></span>
+          <span class="block text-[9px] text-slate-400 font-medium -mt-1">現場教員のためのAI×実践ICTナビ</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="../articles.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 transition">実践記事一覧</a>
+        <a href="../index.html" class="text-xs font-bold text-slate-600 hover:text-sky-600 flex items-center gap-1">
+          <i class="fa-solid fa-house"></i> <span>トップ</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- メイン記事エリア -->
+  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full space-y-8 sm:space-y-10">
+
+    <!-- 記事ヘッダー -->
+    <header class="space-y-4 border-b border-slate-200 pb-6">
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <span class="bg-sky-500 text-white font-black px-2.5 py-1 rounded-md">第8弾</span>
+        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">即効性授業・ICTハック</span>
+        <span class="text-slate-400">公開日：2026-11-09</span>
+      </div>
+      <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+        【コピペで即稼働】週明けの遅刻・体調不良・前時理解度を3分で可視化する「Forms×スプレッドシート」週初めチェックイン
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+        11月中旬の月曜朝は、寒暖差による遅刻や体調不良、前週の授業内容の抜け落ちが重なり、授業開始が15分以上ズルズル遅れがちです。スマホや端末から1分で回答できる3問チェックインにより、授業開始3分で教室全体の理解度とSOSを把握する実践知を提供します。
+      </p>
+      
+      <!-- 担当ユニット & 監査バッジ -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 bg-slate-100/70 p-3 rounded-xl border border-slate-200">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-users-gear text-sky-600"></i>
+          <span><strong>担当</strong>: 若手ルーキーAI（情報科・採用3年目）× 一般普通科教員AI（教務主任・歴14年）</span>
+        </div>
+        <div class="flex items-center gap-2 text-emerald-700 font-bold">
+          <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+          <span>Lex-Sentry 審査済（第2026-1109A号）</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 水先栞のアドバイス（導入） -->
+    <div class="bg-gradient-to-r from-sky-50 via-sky-100/50 to-blue-50 border border-sky-200 rounded-2xl p-4 sm:p-5 shadow-xs flex items-start gap-4">
+      <div class="relative shrink-0">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-sky-300 shadow-sm bg-white">
+          <img src="../assets/character/shiori_avatar.webp" alt="水先 栞" class="w-full h-full object-cover">
+        </div>
+        <span class="absolute -bottom-1 -right-1 bg-amber-400 text-slate-950 font-bold text-[9px] px-1.5 py-0.2 rounded-full border border-white">
+          伴走中
+        </span>
+      </div>
+      <div class="flex-1 text-xs sm:text-sm">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="font-bold text-slate-900">水先 栞</span>
+          <span class="text-[10px] text-sky-700 bg-sky-100 font-semibold px-2 py-0.5 rounded-full">専任ICT伴走ナビゲーター</span>
+        </div>
+        <p class="text-slate-700 leading-relaxed">
+          「月曜の朝は生徒も先生もエンジンがかかりにくい時間帯です。Formsで視覚的に『今日のクラスの現在地』が見えると、授業のテンポ配分に迷いがなくなりますよ！無理せずスモールステップでいきましょう。」
+        </p>
+      </div>
+    </div>
+
+    <!-- セクション1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-sky-600 pl-3">
+        1. 月曜朝の「誰がついてこられていないか」を3分で炙り出す
+      </h2>
+      <div class="text-sm sm:text-base text-slate-700 leading-relaxed space-y-3">
+        <p>出欠確認で名前を呼ぶだけの時間に教員のエネルギーを浪費してはいけません。生徒が着席した瞬間に黒板またはプロジェクターのQRコードを読み込ませ、以下の3問に回答させます。<br>1. 今日の体調・メンタル（5段階アイコン）<br>2. 前回の重要用語（1問・直感選択）<br>3. 今日の単元で「ここが一番不安」なこと（自由記述・任意）<br>教員の手元の端末には、条件付き書式で「赤（体調不安）」「黄（前時不理解）」が即座に色分けされ、誰に個別声かけが必要かが一目瞭然になります。</p>
+      </div>
+    </section>
+
+    <!-- セクション2（プロンプト・実例） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-emerald-600 pl-3">
+        2. Google Forms / MS Forms用コピペ質問セット
+      </h2>
+      <p class="text-sm text-slate-600">
+        以下の質問文をFormsにコピペするだけで、3分チェックインフォームが完成します。
+      </p>
+
+      <!-- プロンプト枠 -->
+      <div class="bg-slate-900 rounded-2xl p-4 sm:p-5 text-white space-y-2.5 shadow-md">
+        <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-2">
+          <span class="font-bold text-amber-400"><i class="fa-solid fa-terminal mr-1.5"></i>【Forms作成用テンプレート】</span>
+          <span class="bg-slate-800 px-2 py-0.5 rounded text-[10px]">コピペ推奨</span>
+        </div>
+        <pre class="text-xs sm:text-sm text-slate-200 font-mono whitespace-pre-wrap leading-relaxed overflow-x-auto">[Q1 - 尺度] 今朝のエネルギー・集中度はどれくらい？（1: 限界・寝不足 〜 5: バッチリ集中できる）
+[Q2 - 選択式] 前回習った「○○（単元キーワード）」の意味として最も近いものは？
+  ・選択肢A（正解）
+  ・選択肢B（よくある勘違い）
+  ・選択肢C（前々回の内容）
+  ・選択肢D（まったく覚えていない・正直に選択）
+[Q3 - 短文] 授業が始まる前に先生に伝えておきたいこと・質問（スキップ可）</pre>
+      </div>
+
+      <!-- 入出力実例 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 space-y-2">
+          <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+            <i class="fa-solid fa-arrow-right-to-bracket text-sky-600"></i> 入力実例
+          </h4>
+          <p class="text-xs text-slate-600 font-mono whitespace-pre-wrap">Google Formsで「スプレッドシートにリンク」を設定。Q1が「1または2」の場合はセルを薄い赤色、Q2が誤答の場合は薄い黄色にする「条件付き書式」を1回設定するだけ。</p>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 space-y-2">
+          <h4 class="text-xs font-black text-emerald-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> AI出力実例
+          </h4>
+          <p class="text-xs text-emerald-950 font-mono whitespace-pre-wrap">回答開始から90秒で回答率95%到達。教員は「今日は全体の3割が前回の公式でつまずいているから、導入の復習を3分延長しよう」「体調1のA君は後で保健室利用を確認しよう」と的確な戦術判断が可能に。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション3（タイムライン） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-amber-500 pl-3">
+        3. 授業開始3分タイムライン
+      </h2>
+      <div class="space-y-3">
+        
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">0:00〜0:30【着席・Forms入力指示】: チャイムと同時にQRコードを投影。「出席代わりに回答して！」</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">0:30〜2:00【集計シート確認】: 教員は手元のタブレットでスプレッドシートのグラフと要注意セルを確認。</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-[11px]"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">2:00〜3:00【全体フィードバック】: 「Q2の正答率は75%！間違えた人はここだけ要チェック」「体調しんどい人は無理せず合図してね」と宣言して本時へ。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション4（NG指導とリカバリー） -->
+    <section class="space-y-4">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 border-l-4 border-rose-500 pl-3">
+        やってはいけないNG指導と現場のリカバリー策
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 space-y-2">
+          <h3 class="text-xs sm:text-sm font-black text-rose-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> やってはいけないNG指導：体調不良や「覚えてない」の選択を怒る
+          </h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            「なんで覚えてないんだ」「朝からだらけるな」と怒ると、生徒は嘘の回答（オール5・適当選択）をするようになり、フォームが死骸化します。正直に答えた生徒に「正直に教えてくれてありがとう、助かるよ」と伝えることがデータ活用の鉄則です。
+          </p>
+        </div>
+        <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 space-y-2">
+          <h3 class="text-xs sm:text-sm font-black text-sky-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-life-ring text-sky-600"></i> 現場のリカバリー策：端末忘れ・通信制限生徒用の「紙サイン」
+          </h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            スマホを持参していない、またはギガ制限の生徒用には、名札カードの裏表（青/赤）を机の右上に置かせるアナログ運用を併用します。デジタルとアナログの複線化で一人も取り残しません。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- セクション5（AIペルソナ読者レビュー） -->
+    <section class="space-y-4 pt-4 border-t border-slate-200">
+      <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+        <i class="fa-solid fa-comments text-sky-600"></i> AIペルソナ読者団による現場検証レビュー
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">中堅困難校担任</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「正直に『覚えてない』を選べる選択肢があるのが秀逸。怒られないとわかると生徒が本音で答えてくれるようになり、授業の入りが劇的に静かになった。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">基礎学力不振生徒</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「名前呼ばれて『はい』って言うだけより、スマホでポチポチする方が楽。体調悪い時に無理に当てられないから安心する。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">現実派保護者</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「授業の出欠確認を効率化して、浮いた時間で先生が生徒の顔色を見てくださるのはありがたい工夫です。」</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+          <span class="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded">通信制・不登校支援</span>
+          <p class="text-xs text-slate-600 leading-relaxed">「教室にいなくても自宅から同じFormsで参加できるため、登校復帰のファーストステップとしても極めて有効。」</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 配布アセット -->
+    <div class="bg-slate-900 text-white p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+      <div class="space-y-1 text-center sm:text-left">
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-wider">現場直撃・無料配布アセット</span>
+        <h4 class="text-base font-black">Forms質問セット＆条件付き書式スプレッドシート（無料配布中）</h4>
+        <p class="text-xs text-slate-400">著作権法第35条の範囲内で校内利用・編集が自由に行えます。</p>
+      </div>
+      <a href="../contact.html" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition whitespace-nowrap shadow-md flex items-center gap-2">
+        <i class="fa-solid fa-download"></i> <span>教材一式を請求・活用</span>
+      </a>
+    </div>
+
+    <!-- 前後の記事ナビゲーション -->
+    <div class="flex justify-between items-center gap-4 pt-6 border-t border-slate-200 text-xs font-bold">
+      <a href="day7-... .html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
+        <i class="fa-solid fa-arrow-left"></i> <span>前の記事へ</span>
+      </a>
+      <a href="../articles.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition">
+        連載記事一覧へ
+      </a>
+      <a href="day9-...html" class="text-slate-600 hover:text-sky-600 flex items-center gap-1.5">
+        <span>次の記事へ</span> <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center space-y-3">
+      <p class="text-slate-500 text-[11px]">EduAnchor AI（エデュアンカー） ｜ 現場教員のための「AI×実践ICT」総合実践ナビ</p>
+      <div class="flex justify-center gap-4 text-xs font-medium">
+        <a href="../about.html" class="hover:text-white transition">当サイトについて</a>
+        <a href="../articles.html" class="hover:text-white transition">実践記事一覧</a>
+        <a href="../team.html" class="hover:text-white transition">執筆陣・体制</a>
+        <a href="../contact.html" class="hover:text-white transition">お問い合わせ</a>
+        <a href="../terms.html" class="hover:text-white transition">利用規約</a>
+      </div>
+      <p class="text-[10px] text-slate-600">© 2026 EduAnchor AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
